@@ -1,0 +1,147 @@
+.navbar nav
+{
+    background-color: #4ABDAC;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1020px;
+}
+
+ul
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+li
+{
+    list-style: none;
+    text-align: center;
+    background-color: #F7B733;
+    border-radius: 50px;
+}
+
+li a
+{
+    text-decoration: none;
+    font-size: 18px;
+    text-emphasis: none;
+    color: #fff;
+}
+
+li a::before
+{
+    text-emphasis: none;
+}
+
+a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: .2rem 1rem;
+}
+
+a img
+{
+    width: 35px;
+    height: 35px;
+
+}
+
+.btn-cart
+{
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.btn-cart:hover
+{
+    cursor: pointer;
+    background-color: #DFDCE3;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.btn-cart:focus
+{
+    outline: none;
+    background-color: #F7B733;
+}
+
+.btn-cart img
+{
+    width: 30px;
+    height: 30px;
+}
+
+.pet-lovers-logo
+{
+    width: 90px;
+    height: 80px;
+}
+
+.upper-bar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+
+.input-group
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 0;
+}
+
+.input-group input
+{
+    width: 100%;
+    padding: .7rem;
+    background-color: #DFDCE3;
+    border: none;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.input-group button
+{
+    background-color: #F7B733;
+    border: none;
+    border-radius: 0px 50px 50px 0px;
+    padding: .48rem 1rem;
+
+}
+
+.btn-outline-secondary img
+{
+    width: 20px;
+    height: 20px;
+    padding: 0%;
+    margin: 0;
+}
+
+@media (max-width: 575.98px)
+{
+    .menu-option
+    {
+        display: none;
+    }
+
+    ul
+    {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+}
