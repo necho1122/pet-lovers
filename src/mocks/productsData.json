@@ -1,0 +1,290 @@
+{
+  "dogs": {
+    "food": [
+      {
+        "id": "001",
+        "descripcion": "PEDIGREE Ração Úmida Pedigree Sachê Carne Ao Molho Para Cães Adultos De Raças Pequenas - Leve 12",
+        "precio": 9.99,
+        "foto": "https://m.media-amazon.com/images/I/61O0d4bO6eL._AC_UL320_.jpg"
+      },
+      {
+        "id": "002",
+        "descripcion": "BAW WAW Ração Baw Waw Para Cães Adultos Raças Pequenas Sabor Carne Frango E Arroz - 10.1Kg",
+        "precio": 5.49,
+        "foto": "https://m.media-amazon.com/images/I/61x7rkKuGLL._AC_UL320_.jpg"
+      },
+      {
+        "id": "003",
+        "descripcion": "BAW WAW Patê Baw Waw Para Cães Sabor Frango 280G",
+        "precio": 3.99,
+        "foto": "https://m.media-amazon.com/images/I/51N1enXCcaL._AC_UL320_.jpg"
+      },
+      {
+        "id": "004",
+        "descripcion": "Pet Delícia Natural Fácil Digestão Panelinha de Carne 320g Pet Delícia Raça Adulto, Sabor Carne 320g",
+        "precio": 24.99,
+        "foto": "https://m.media-amazon.com/images/I/51BucJzNMmL._AC_UL320_.jpg"
+      },
+      {
+        "id": "005",
+        "descripcion": "Premier Pet Golden Special - Ração para Cães Adultos, Sabor Frango e Carne, 15kg",
+        "precio": 29.99,
+        "foto": "https://m.media-amazon.com/images/I/61krIHXdNGS._AC_UL320_.jpg"
+      },
+      {
+        "id": "006",
+        "descripcion": "PEDIGREE Biscoito Pedigree Biscrok Para Cães Adultos Raças Pequenas 1 Kg",
+        "precio": 12.99,
+        "foto": "https://m.media-amazon.com/images/I/81RTRiNEdRL._AC_UL320_.jpg"
+      },
+      {
+        "id": "007",
+        "descripcion": "PEDIGREE Ração Úmida Para Cachorros Pedigree Lata Patê De Carne Adultos 280G",
+        "precio": 3.49,
+        "foto": "https://m.media-amazon.com/images/I/81O3K3SH8zL._AC_UL320_.jpg"
+      },
+      {
+        "id": "008",
+        "descripcion": "Purina Alpo Alpo - Ração Cães Adultos Carne E Frango 10,1Kg",
+        "precio": 55.99,
+        "foto": "https://m.media-amazon.com/images/I/813lol60QhL._AC_UL320_.jpg"
+      },
+      {
+        "id": "009",
+        "descripcion": "Fórmula Natural Ração Úmida Para Cães Sabor Picadinho De Carne 270G",
+        "precio": 29.99,
+        "foto": "https://m.media-amazon.com/images/I/51wrFMjYLKL._AC_UL320_.jpg"
+      },
+      {
+        "id": "010",
+        "descripcion": "Be Nature Alimento Úmido Natural Para Cães Idosos Organnact Lata Patê De Salmão 300G",
+        "precio": 29.99,
+        "foto": "https://m.media-amazon.com/images/I/61oLd5K8rIL._AC_UL320_.jpg"
+      }
+    ],
+    "accesorios": [
+        {
+            "id": "011",
+            "descripcion": "Luppet Comedouro para Cães e gatos Toronto Elevado e com potes de Inox P, 35x18x12cm",
+            "precio": 29.99,
+            "foto": "https://m.media-amazon.com/images/I/51fJe0JFL-L._AC_UL320_.jpg"
+            },
+            {
+            "id": "012",
+            "descripcion": "SS Pets Cama Pet Para Cães E Gatos Tropical Rosa Tamanho Médio Para Cães",
+            "precio": 29.99,
+            "foto": "https://m.media-amazon.com/images/I/615Rh89Fx4L._AC_UL320_.jpg"
+            },
+            {
+            "id": "013",
+            "descripcion": "Ferplast Juno Pequena, Tigela Para Animais, Branca, 0,3 L, Cerâmica Ferplast para Cães, Pequeno",
+            "precio": 29.99,
+            "foto": "https://m.media-amazon.com/images/I/61q8cQR2BSL._AC_UL320_.jpg"
+            },
+            {
+            "id": "014",
+            "descripcion": "Chalesco Guia Retrátil Chalesco Plus 20Kg",
+            "precio": 29.99,
+            "foto": "https://m.media-amazon.com/images/I/61Zd+oN1xxL._AC_UL320_.jpg"
+            },
+            {
+            "id": "015",
+            "descripcion": "Cama Casa Toca Iglu Tenda Caminha Cabana para Cachorros e Gatos Pet 47cmx45cm ",
+            "precio": 29.99,
+            "foto": "https://m.media-amazon.com/images/I/61VPscUJmXL._AC_UL320_.jpg"
+            }
+    ]
+    },
+    "gatos": {
+    "comida": [
+      {
+        "id": "016",
+        "descripcion": "Pro Plan Adult Urinary Tract Health Chicken & Rice Formula Dry Cat Food",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2022-11/ppcat_spcl_a_uth_chknrc_hero_f_20-1.png.webp?itok=nHnPSXWA",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "017",
+        "descripcion": "Pro Plan Development Kitten Shredded Blend Chicken & Rice Formula Dry Cat Food",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2022-11/ppcat_dev_ktn_shrdblnd_chknrc_hero_f_20-1.png.webp?itok=2RwpL3Cq",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "018",
+        "descripcion": "Pro Plan Adult Complete Essentials Chicken & Rice Formula Dry Cat Food",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2022-11/ppcat_ce_a_chknrc_hero_f_20-1.png.webp?itok=lLaw-jVa",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "019",
+        "descripcion": "Pro Plan LiveClear Adult Indoor Turkey & Rice Allergen Reducing Cat Food",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2022-11/purina-pro-plan-allergen-reducing-indoor-cat-food-1.png.webp?itok=p3gShBVg",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "020",
+        "descripcion": "Pro Plan Adult Indoor Turkey & Rice Formula Dry Cat Food",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2022-11/ppcat_spcl_a_indr_trkyrc_hero_f_20-1.png.webp?itok=mYnrcoD9",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "021",
+        "descripcion": "Pro Plan Complete Essentials Grain Free Chicken, Turkey & Beef Variety Pack 24 Count Wet Cat Food",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-01/pp_wet_cat_ce_gf_vp_00038100101204_vanity_1_0.jpg.webp?itok=rLcjXfi0",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "022",
+        "descripcion": "Pro Plan Vital Systems Beef Entree in Gravy",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2023-06/proplan_packshot_wetcatfood-vitalsystems-beef.png.webp?itok=TJNpyyBQ",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "023",
+        "descripcion": "Purina Pro Plan Vital Systems Kitten Salmon Entree Wet Cat Food",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-01/pp_wet_ktn_vtlsystm_slmn_00038100101129_vanity.jpg.webp?itok=WsJ4TbQw",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "024",
+        "descripcion": "Fancy Feast Purely Fancy Feast Natural Tender Tongol Tuna Wet Cat Food in a Delicate Broth",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/Purely_Fancy_Feast_Tongol_Tuna_800x1000.png.webp?itok=hFDF5zlo",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "025",
+        "descripcion": "Purina Fancy Feast Gravy Lovers Poultry and Beef Gourmet Wet Cat Food Variety Pack – 36 Count",
+        "foto": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2023-06/fancy-feast-gravy-lovers-variety-pack-36ct.png.webp?itok=VKq8wzLe",
+        "precio": "Precio aquí"
+      }
+    ],
+    "accesorios": [
+      {
+        "id": "027",
+        "descripcion": "Arranhador Para Gatos Poste Com Brinquedo Duplo Exclusivo (Preto)",
+        "foto": "https://m.media-amazon.com/images/I/51qW1OTsubL._AC_UL320_.jpg",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "028",
+        "descripcion": "Melhor Playground para Gatos Brinquedo de Gato Mdf Reforçado Gatificação Parquinho 7 peças",
+        "foto": "https://m.media-amazon.com/images/I/51+wRXyqzVL._AC_UL320_.jpg",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "029",
+        "descripcion": "Kit 5 Brinquedos Para Gato Bolinha Ratinho + Varinha Gatos",
+        "foto": "https://m.media-amazon.com/images/I/71yKqttA2YL._AC_UL320_.jpg",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "030",
+        "descripcion": "Tapete Higiênico Coletor de Areia Para Gatos Preto Tamanho P - 40x50",
+        "foto": "https://m.media-amazon.com/images/I/6188jYc-N2L._AC_UL320_.jpg",
+        "precio": "Precio aquí"
+      },
+      {
+        "id": "031",
+        "descripcion": "CatMyPet Cat Sofa Arranhador Preto Catmypet Para Gatos",
+        "foto": "https://m.media-amazon.com/images/I/519PqV0Ks-L._AC_UL320_.jpg",
+        "precio": "Precio aquí"
+      }
+    ]
+  },
+    "birds": {
+  "food": [
+    {
+      "id": "016",
+      "descripcion": "Nutricon Néctar para Beija-Flor 250g",
+      "foto": "https://m.media-amazon.com/images/I/71783d2HaZL._AC._SR360,460.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "017",
+      "descripcion": "Megazoo Ração Megazoo Extrusada Calopsitas E Periquit Pm13 350G",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/61+NyJ0QkuL._AC_UL600_SR600,400_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "018",
+      "descripcion": "ZOOTEKNA Beija Flor Nectar - 250 G",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/71J90TH175L._AC_UL600_SR600,400_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "019",
+      "descripcion": "Reino das Aves Ração Para Aves Gold Mix Calopsita 500G Reino Das Aves",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/61mJAmyOTiL._AC_UL600_SR600,400_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "020",
+      "descripcion": "NuTrópica Calopsita com frutas - 300 g",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/613bRdHoh0L._AC_UL600_SR600,400_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "021",
+      "descripcion": "RAÇÃO PASSAROS LIVRES DE JARDIM 5KG",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/819AwF-RiAL._AC_UL600_SR600,400_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "022",
+      "descripcion": "megazoo Ração Megazoo Mix Calopsitas Louro José 500G",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/61VvGsjZKNS._AC_UL600_SR600,400_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "023",
+      "descripcion": "NUTROPICA Ração Nutrópica Para Sabiá E Pássaro Preto - 300G",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/61983rZhsBL._AC_UL600_SR600,400_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "024",
+      "descripcion": "NuTrópica Seleção Natural Papagaio - 300 g",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/61jiU8OPChL._AC_UL600_SR600,400_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "025",
+      "descripcion": "Avitrin Cálcio Plus Avitrin Para Pássaros",
+      "foto": "https://images-na.ssl-images-amazon.com/images/I/81jDIyQhDvL._AC_UL300_SR300,200_.jpg",
+      "precio": "Precio aquí"
+    }
+  ],
+  "accesorios": [
+    {
+      "id": "026",
+      "descripcion": "Gaiola Criadeira Para Aves Periquito Com Ninho Mdf Cor Branca E Azul Jel Plast Pet Piu",
+      "foto": "https://m.media-amazon.com/images/I/61J8ny4oiyL._AC_UL320_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "027",
+      "descripcion": "Camnoon Conjunto de brinquedos para pássaros papagaio Gaiola de balanço Acessórios cor de madeira",
+      "foto": "https://m.media-amazon.com/images/I/71J8md3r5KL._AC_UL320_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "028",
+      "descripcion": "Comedouro E Bebedouro Tratador Casinha De Passarinho Livres",
+      "foto": "https://m.media-amazon.com/images/I/71akthQlDeL._AC_UL320_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "029",
+      "descripcion": "Hipykat Calha alimentadora de galinha – Acessórios para alimentador de cerca de aves sem desperdício",
+      "foto": "https://m.media-amazon.com/images/I/71WkQ4p39DL._AC_UL320_.jpg",
+      "precio": "Precio aquí"
+    },
+    {
+      "id": "030",
+      "descripcion": "Balanço Safari Color Pássaros Calopsita Periquito Canario",
+      "foto": "https://m.media-amazon.com/images/I/61LDmHf2lDL._AC_UL320_.jpg",
+      "precio": "Precio aquí"
+    }
+  ]
+}
+}
