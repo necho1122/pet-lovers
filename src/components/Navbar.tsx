@@ -6,11 +6,13 @@ function Navbar() {
 		<div className='navbar'>
 			<nav>
 				<div className='upper-bar'>
+					<a href="/">
 					<img
 						className='pet-lovers-logo'
 						src={petLoversLogo}
 						alt='pet lovers logo'
 					/>
+					</a>
 					<div className='input-group'>
 						<input
 							type='text'

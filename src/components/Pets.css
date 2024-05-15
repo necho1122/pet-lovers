@@ -1,0 +1,46 @@
+.pets-container {
+    margin: 0 auto;
+}
+
+.pets-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.pet-image{
+    width: 100%;
+    height: 200px;
+}
+
+.pet-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.pet-description p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2em;
+    max-height: 2.4em;
+    text-overflow: ellipsis;
+}
+
+.adoption-indication {
+    color: #3a3a3a;
+}
+
+.pet-slice {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
