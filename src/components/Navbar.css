@@ -1,55 +1,71 @@
-.navbar nav
+.navbar
 {
-    background-color: #4ABDAC;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin: 0 auto;
-    max-width: 1020px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
 }
 
-ul
+nav
+{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: .5rem;
+    margin: 0 1rem;
+}
+
+.pet-lovers-logo-text
+{
+    display: none;
+}
+
+.navbar ul
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: .5rem;
     padding: 0;
     margin: 0;
 }
 
-li
+.navbar li
 {
     list-style: none;
     text-align: center;
-    background-color: #F7B733;
     border-radius: 50px;
 }
 
-li a
+.navbar li a
 {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     text-emphasis: none;
-    color: #fff;
+    color: #DFDCE3;
 }
 
-li a::before
+.navbar li a:hover
+{
+    text-decoration: underline;
+}
+
+.navbar li a::before
 {
     text-emphasis: none;
 }
 
-a
+.navbar a
 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
-    padding: .2rem 1rem;
+    padding: .2rem .5rem;
 }
 
-a img
+.navbar li a img
 {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 
 }
 
@@ -79,12 +95,6 @@ a img
 {
     width: 30px;
     height: 30px;
-}
-
-.pet-lovers-logo
-{
-    width: 90px;
-    height: 80px;
 }
 
 .upper-bar
@@ -140,8 +150,36 @@ a img
         display: none;
     }
 
-    ul
+    .navbar ul
     {
         grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .navbar
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .pet-lovers-logo
+    {
+        display: none;
+    }
+
+    .pet-lovers-logo-text
+    {
+        display: block;
+    }
+
+    .input-group
+    {
+        padding: 0 1rem;
+    }
+
+    .input-group button
+    {
+        padding: .46rem 1rem;
     }
 }

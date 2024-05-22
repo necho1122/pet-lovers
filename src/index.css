@@ -10,11 +10,12 @@
   color-scheme: light dark;
   color: #DFDCE3;
   background-color: #4ABDAC;
-      max-width: 1280px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 body
 {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }

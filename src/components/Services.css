@@ -1,0 +1,134 @@
+.services-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+
+}
+
+.services-overview
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.services-image-section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.services-image-section img
+{
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 200px;
+}
+
+.child
+{
+    width: 100%;
+    flex: 1;
+}
+
+.overview-information h1
+{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.links-services-section
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 3rem;
+}
+
+.links-services-section a
+{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #DFDCE3;
+    border: #DFDCE3 2px solid;
+    border-radius: 5px;
+    padding: .3rem 1rem;
+}
+
+.list-pet-services
+{
+    padding: 0;
+    margin: 0;
+}
+
+.list-pet-services ul
+{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.list-pet-services li
+{
+    border: 1px solid #DFDCE3;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #F7B733;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.list-pet-services li a
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 1rem .5rem;
+
+}
+
+.list-pet-services-image
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #DFDCE3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: .5rem;
+}
+
+.list-pet-services-image img
+{
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.list-pet-services h4
+{
+    font-size: 1rem;
+    font-weight: 700;
+}

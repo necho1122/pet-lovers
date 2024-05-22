@@ -1,7 +1,7 @@
 import productsData from '../mocks/productsData.json';
 import mainCarouselData from '../mocks/mainCarouselData.json';
 import './Home.css';
-import logoVertical from '../assets/pet-lovers-logo-vertical.png'
+import logoVertical from '../assets/pet-lovers-logo-vertical.png';
 import { useState, useEffect } from 'react';
 
 interface Slide {
@@ -111,7 +111,6 @@ interface MainSlide {
 }
 
 const MainCarrousel = ({ slides }: { slides: MainSlide[] }) => {
-
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	useEffect(() => {
@@ -126,24 +125,24 @@ const MainCarrousel = ({ slides }: { slides: MainSlide[] }) => {
 
 	return (
 		<div className='main-carousel'>
-			{slides.map((slide: MainSlide, index: number) => (
-				currentSlide === index && (
-					<div
-					className='main-slide'
-					key={index}
-					style={{
-						backgroundImage: `url(${slide.backgroundImageUrl})`,
-					}}
-				>
-					<h2>{slide.title}</h2>
-					<img
-						src={logoVertical}
-						alt={slide.title}
-					/>
-				</div>
-				)
-				
-			))}
+			{slides.map(
+				(slide: MainSlide, index: number) =>
+					currentSlide === index && (
+						<div
+							className='main-slide'
+							key={index}
+							style={{
+								backgroundImage: `url(${slide.backgroundImageUrl})`,
+							}}
+						>
+							<h2>{slide.title}</h2>
+							<img
+								src={logoVertical}
+								alt={slide.title}
+							/>
+						</div>
+					)
+			)}
 		</div>
 	);
 };
@@ -159,10 +158,18 @@ function Home() {
 
 	return (
 		<div className='home-app'>
-			<h1>Bem vindos a Pet Lovers, Sua Pet Online</h1>
+			<h1>
+				Bem vindos a <span style={{ color: '#F7B733' }}>Pet</span>{' '}
+				<span style={{ color: '#000' }}>Lovers</span>, Sua Pet Online
+			</h1>
 			<MainCarrousel slides={mainCarouselData.slide} />
 			<h3>Pets para adoção</h3>
-			<Carousel slides={sliceAdoption.map((slide) => ({ ...slide, precio: Number(slide.precio) }))} />
+			<Carousel
+				slides={sliceAdoption.map((slide) => ({
+					...slide,
+					precio: Number(slide.precio),
+				}))}
+			/>
 			<h3>Comida para cães</h3>
 			<Carousel slides={slidesDogFood} />
 			<h3>Acessórios para cães</h3>

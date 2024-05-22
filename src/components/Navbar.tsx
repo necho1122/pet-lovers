@@ -1,17 +1,23 @@
 import './Navbar.css';
-import petLoversLogo from '../assets/pet-lovers-logo-sf.png';
+import petLoversLogo from '../assets/pet-lovers-logo-vertical.png';
+import petLoversLogoText from '../assets/pet-lovers-logo-only-text.png';
 
 function Navbar() {
 	return (
 		<div className='navbar'>
 			<nav>
-				<div className='upper-bar'>
-					<a href="/">
-					<img
-						className='pet-lovers-logo'
-						src={petLoversLogo}
-						alt='pet lovers logo'
-					/>
+				<div className='upper-bar upper-bar-nav'>
+					<a href='/'>
+						<img
+							className='pet-lovers-logo-text'
+							src={petLoversLogoText}
+							alt='pet lovers logo text'
+						/>
+						<img
+							className='pet-lovers-logo'
+							src={petLoversLogo}
+							alt='pet lovers logo'
+						/>
 					</a>
 					<div className='input-group'>
 						<input

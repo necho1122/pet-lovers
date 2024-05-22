@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import Pets from './components/Pets';
+import Products from './components/Products';
+import Vet from './components/Vet';
+import Services from './components/Services';
 
 function App() {
 	return (
@@ -18,6 +21,9 @@ function App() {
 							element={<Home />}
 						/>
 						<Route path='/pets' element={<Pets />} />
+						<Route path='/products' element={<Products />} />
+						<Route path='/veterinary' element={<Vet />} />
+						<Route path='/services' element={<Services />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>
