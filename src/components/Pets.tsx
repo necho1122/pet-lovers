@@ -1,22 +1,107 @@
-import productsData from '../mocks/productsData.json'
-import './Pets.css'
+import productsData from '../mocks/productsData.json';
+import petsAdoptionBackground from '../assets/pet-adoption-background.jpg';
+import './Pets.css';
+import { useState } from 'react';
+
+// Definición del tipo para los productos
+interface Product {
+	id: string;
+	raza: string;
+	foto: string;
+	descripcion: string;
+}
 
 function Pets() {
-  return (
-    <div className='pets-container'>
-    <h1>Animais Resgatados em Busca de um Lar</h1>
-    <div className='pets-section'>
-      {
-        productsData.pets.adoption.map((product) => (
-          <div key={product.id} className='pet-slice'>
-            <div className="pet-image">
-            <img src={product.foto} alt='pets' />
-            </div>
-            <div className="pet-description">
-                <p>{product.descripcion}</p>
-            </div>
-            <p className='adoption-indication'>Disponivel para adopção</p>
-            <button className='add-to-cart-btn'>
+	// Estado inicial con tipo correcto
+	const [raza, setRaza] = useState<Product[]>(productsData.pets.adoption);
+
+	// Tipo adecuado para la función handleRazaChange
+	const handleRazaChange = (raza: Product[]) => {
+		setRaza(raza);
+	};
+
+	return (
+		<div className='pets-container'>
+			<div className='pets-overview'>
+				<div className='pets-overview-information'>
+					<img
+						src={petsAdoptionBackground}
+						alt='pet adoption'
+					/>
+					<h1>Animais Resgatados em Busca de um Lar</h1>
+					<div className='pets-category-links'>
+						<a
+							href='#'
+							onClick={(e) => {
+								e.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+								handleRazaChange(
+									productsData.pets.adoption.filter(
+										(product) => product.raza === 'cachorro'
+									)
+								);
+							}}
+						>
+							<img
+								src='https://cdn-icons-png.flaticon.com/512/13481/13481015.png'
+								alt='dog icon'
+							/>
+							Cachorros
+						</a>
+						<a
+							href='#'
+							onClick={(e) => {
+								e.preventDefault();
+								handleRazaChange(
+									productsData.pets.adoption.filter(
+										(product) => product.raza === 'gato'
+									)
+								);
+							}}
+						>
+							<img
+								src='https://cdn-icons-png.flaticon.com/512/5702/5702228.png'
+								alt='cat icon'
+							/>
+							Gatos
+						</a>
+						<a
+							href='#'
+							onClick={(e) => {
+								e.preventDefault();
+								handleRazaChange(
+									productsData.pets.adoption.filter(
+										(product) => product.raza === 'bird'
+									)
+								);
+							}}
+						>
+							<img
+								src='https://cdn-icons-png.flaticon.com/512/3397/3397478.png'
+								alt='animals icon'
+							/>
+							Outros
+						</a>
+					</div>
+				</div>
+			</div>
+			<h2>Encontre Seu Novo Melhor Amigo Hoje! 🐾</h2>
+			<div className='pets-section'>
+				{raza.map((product) => (
+					<div
+						key={product.id}
+						className='pet-slice'
+					>
+						<div className='pet-image'>
+							<img
+								src={product.foto}
+								alt='pets'
+							/>
+						</div>
+						<div className='pet-description'>
+							<p>{product.descripcion}</p>
+						</div>
+						<p className='adoption-indication'>Disponível para adoção</p>
+						<button className='add-to-cart-btn'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								version='1.1'
@@ -47,12 +132,11 @@ function Pets() {
 								</g>
 							</svg>
 						</button>
-          </div>
-        ))
-      }
-    </div>
-    </div>
-  )
+					</div>
+				))}
+			</div>
+		</div>
+	);
 }
 
-export default Pets
+export default Pets;

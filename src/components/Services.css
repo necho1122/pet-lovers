@@ -79,6 +79,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
+    padding: 0;
 }
 
 .list-pet-services li
@@ -131,4 +132,23 @@
 {
     font-size: 1rem;
     font-weight: 700;
+}
+
+@media screen and (max-width: 680px)
+{
+    .services-overview
+    {
+        flex-direction: column;
+    }
+
+    .links-services-section
+    {
+        margin: 0;
+    }
+
+    .overview-information h1
+    {
+        font-size: 2rem;
+        padding-left: .5rem;
+    }
 }

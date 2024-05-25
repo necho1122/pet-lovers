@@ -3,6 +3,13 @@
     margin: 0 auto;
 }
 
+.products-container h1
+{
+    font-size: 2rem;
+    padding: 0 1rem;
+    color: #fff;
+}
+
 .products-section
 {
     display: grid;
@@ -22,7 +29,7 @@
 {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fit;
     border-radius: 5px;
 }
 
@@ -60,4 +67,70 @@
 .product-slice p
 {
     padding: 0 .5rem;
+}
+
+.products-overview
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.products-overview-information
+{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.products-overview-information img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.products-category-links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.products-category-links a
+{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #DFDCE3;
+    background-color: #F7B733;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.products-category-links img
+{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    opacity: 1;
+    z-index: 1;
 }

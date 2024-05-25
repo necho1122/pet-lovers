@@ -8,7 +8,7 @@ function Vet() {
 			<div className='vet-overview-section'>
 				<div className='vet-overview-information vet-container-child'>
 					<h1>
-						Saúde e <span style={{ color: '#F7B733' }}>Bem</span>-
+						Saúde e <span style={{ color: '#F7B733' }}>Bem-</span>
 						<span style={{ color: '#000' }}>Estar</span> para Todos os Seus
 						Animais de Estimação
 					</h1>

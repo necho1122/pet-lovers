@@ -6,6 +6,7 @@ import Pets from './components/Pets';
 import Products from './components/Products';
 import Vet from './components/Vet';
 import Services from './components/Services';
+import ContactUs from './components/ContactUs';
 
 function App() {
 	return (
@@ -20,10 +21,26 @@ function App() {
 							path='/'
 							element={<Home />}
 						/>
-						<Route path='/pets' element={<Pets />} />
-						<Route path='/products' element={<Products />} />
-						<Route path='/veterinary' element={<Vet />} />
-						<Route path='/services' element={<Services />} />
+						<Route
+							path='/pets'
+							element={<Pets />}
+						/>
+						<Route
+							path='/products'
+							element={<Products />}
+						/>
+						<Route
+							path='/veterinary'
+							element={<Vet />}
+						/>
+						<Route
+							path='/services'
+							element={<Services />}
+						/>
+						<Route
+							path='/contact'
+							element={<ContactUs />}
+						/>
 					</Route>
 				</Routes>
 			</BrowserRouter>

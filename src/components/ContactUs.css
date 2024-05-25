@@ -1,0 +1,134 @@
+.contact-us-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: .5rem;
+    background-color: #DFDCE3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+
+.contact-information
+{
+    flex: 1;
+    padding: .5rem;
+    background-color: #011D2B;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+}
+
+.contact-information h1
+{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-information p
+{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.contact-information a
+{
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-information a:hover
+{
+    text-decoration: underline;
+}
+
+.social-links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.contact-form
+{
+    flex: 1;
+    padding-left: 20px;
+}
+
+.contact-form form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea
+{
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea
+{
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button
+{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover
+{
+    background-color: #0056b3;
+}
+
+.contact-information p
+{
+    display: flex;
+    align-items: center;
+
+}
+
+.contact-information p img
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
+@media screen and (max-width: 575px)
+{
+    .contact-us-container
+    {
+        flex-direction: column;
+        align-items: stretch;
+        box-sizing: border-box;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .contact-form
+    {
+        margin: .5rem;
+        padding-left: 0;
+    }
+
+    .contact-information
+    {
+        margin: .5rem;
+    }
+}

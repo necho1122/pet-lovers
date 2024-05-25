@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useState, useEffect } from 'react';
 import productsData from '../mocks/productsData.json';
-import mainCarouselData from '../mocks/mainCarouselData.json';
+import sitCat from '../assets/red-white-cat.webp';
 import './Home.css';
-import logoVertical from '../assets/pet-lovers-logo-vertical.png';
-import { useState, useEffect } from 'react';
 
 interface Slide {
 	foto: string;
@@ -10,7 +10,14 @@ interface Slide {
 	precio: number;
 }
 
-const Carousel = ({ slides }: { slides: Slide[] }) => {
+/*
+interface MainSlide {
+	title: string;
+	backgroundImageUrl: string;
+}
+*/
+
+const Carousel: React.FC<{ slides: Slide[] }> = ({ slides }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const [slidesToShow, setSlidesToShow] = useState(1);
 
@@ -23,7 +30,6 @@ const Carousel = ({ slides }: { slides: Slide[] }) => {
 		resizeHandler();
 
 		window.addEventListener('resize', resizeHandler);
-
 		return () => {
 			window.removeEventListener('resize', resizeHandler);
 		};
@@ -105,12 +111,7 @@ const Carousel = ({ slides }: { slides: Slide[] }) => {
 	);
 };
 
-interface MainSlide {
-	title: string;
-	backgroundImageUrl: string;
-}
-
-const MainCarrousel = ({ slides }: { slides: MainSlide[] }) => {
+/*const MainCarousel: React.FC<{ slides: MainSlide[] }> = ({ slides }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	useEffect(() => {
@@ -125,65 +126,79 @@ const MainCarrousel = ({ slides }: { slides: MainSlide[] }) => {
 
 	return (
 		<div className='main-carousel'>
-			{slides.map(
-				(slide: MainSlide, index: number) =>
-					currentSlide === index && (
-						<div
-							className='main-slide'
-							key={index}
-							style={{
-								backgroundImage: `url(${slide.backgroundImageUrl})`,
-							}}
-						>
-							<h2>{slide.title}</h2>
-							<img
-								src={logoVertical}
-								alt={slide.title}
-							/>
-						</div>
-					)
+			{slides.map((slide, index) =>
+				currentSlide === index ? (
+					<div
+						className='main-slide'
+						key={index}
+						style={{ backgroundImage: `url(${slide.backgroundImageUrl})` }}
+					>
+						<h2>{slide.title}</h2>
+						<img
+							src={logoVertical}
+							alt={slide.title}
+						/>
+					</div>
+				) : null
 			)}
 		</div>
 	);
 };
+*/
 
-function Home() {
-	const sliceAdoption = productsData.pets.adoption;
-	const slidesDogFood = productsData.dogs.food;
-	const sliceDogAcessories = productsData.dogs.accesorios;
-	const slidesCatFood = productsData.gatos.comida;
-	const sliceCatAcessories = productsData.gatos.accesorios;
-	const sliceBirdsFood = productsData.birds.food;
-	const sliceBirdsAcessories = productsData.birds.accesorios;
+const Home: React.FC = () => {
+	const { pets, dogs, gatos, birds } = productsData;
+	const sections = [
+		{ title: 'Pets para adoção', slides: pets.adoption },
+		{ title: 'Comida para cães', slides: dogs.food },
+		{ title: 'Acessórios para cães', slides: dogs.accesorios },
+		{ title: 'Comida para gatos', slides: gatos.comida },
+		{ title: 'Acessórios para gatos', slides: gatos.accesorios },
+		{ title: 'Comida para aves', slides: birds.food },
+		{ title: 'Acessórios para aves', slides: birds.accesorios },
+	];
 
 	return (
 		<div className='home-app'>
-			<h1>
-				Bem vindos a <span style={{ color: '#F7B733' }}>Pet</span>{' '}
-				<span style={{ color: '#000' }}>Lovers</span>, Sua Pet Online
-			</h1>
-			<MainCarrousel slides={mainCarouselData.slide} />
-			<h3>Pets para adoção</h3>
-			<Carousel
-				slides={sliceAdoption.map((slide) => ({
-					...slide,
-					precio: Number(slide.precio),
-				}))}
-			/>
-			<h3>Comida para cães</h3>
-			<Carousel slides={slidesDogFood} />
-			<h3>Acessórios para cães</h3>
-			<Carousel slides={sliceDogAcessories} />
-			<h3>Comida para gatos</h3>
-			<Carousel slides={slidesCatFood} />
-			<h3>Acessórios para gatos</h3>
-			<Carousel slides={sliceCatAcessories} />
-			<h3>Comida para aves</h3>
-			<Carousel slides={sliceBirdsFood} />
-			<h3>Acessórios para aves</h3>
-			<Carousel slides={sliceBirdsAcessories} />
+			<div className='home-overview'>
+				<div className='home-overview-image'>
+					<div className='background-circle'></div>
+					<img
+						src={sitCat}
+						alt='cat'
+					/>
+				</div>
+				<div className='home-overview-information'>
+					<h1>
+						Bem-vindos a <span style={{ color: '#F7B733' }}>Pet</span>{' '}
+						<span style={{ color: '#000' }}>Lovers</span>, Sua Pet Online
+					</h1>
+					<h3>Ofertas Exclusivas!</h3>
+					<ul>
+						<li>🌟 20% de Desconto em Alimentos Premium</li>
+						<li>🎉 Brinquedos Divertidos pela Metade do Preço</li>
+						<li>✨ Acessórios Modernos para Cada Mascota</li>
+					</ul>
+					<div className='home-overview-links'>
+						<a href='#'>one section</a>
+						<a href='#'>two section</a>
+					</div>
+				</div>
+			</div>
+			<h2>🐾 Descubra o Melhor para o Seu Melhor Amigo 🐾</h2>
+			{sections.map((section, index) => (
+				<div key={index}>
+					<h3>{section.title}</h3>
+					<Carousel
+						slides={section.slides.map((slide: any) => ({
+							...slide,
+							precio: Number(slide.precio),
+						}))}
+					/>
+				</div>
+			))}
 		</div>
 	);
-}
+};
 
 export default Home;

@@ -61,3 +61,86 @@
 {
     padding: 0 .5rem;
 }
+
+.pets-container h1
+{
+    font-size: 1.7rem;
+    padding: 0 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.pets-container h2
+{
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    text-align: start;
+    color: #DFDCE3;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.pets-overview
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.pets-overview-information
+{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pets-overview-information img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.pets-category-links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.pets-category-links a
+{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #DFDCE3;
+    background-color: #F7B733;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.pets-category-links img
+{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+}

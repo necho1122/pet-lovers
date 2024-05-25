@@ -1,23 +1,61 @@
-import productsData from '../mocks/productsData.json'
-import './products.css'
+import productsData from '../mocks/productsData.json';
+import './products.css';
 
 function Products() {
-  return (
-    <div className='products-container'>
-    <h1>Descubra o Melhor para o Seu Pet: Nutrição, Diversão e Bem-Estar</h1>
-    <h3>Cães</h3>
-    <div className='products-section'>
-      {
-        productsData.dogs.food.map((product) => (
-          <div key={product.id} className='product-slice'>
-            <div className="product-image">
-            <img src={product.foto} alt='products' />
-            </div>
-            <div className="product-description">
-                <p>{product.descripcion}</p>
-            </div>
-            <p className='adoption-indication'>R$ {product.precio}</p>
-            <button className='add-to-cart-btn'>
+	return (
+		<div className='products-container'>
+			<div className='products-overview'>
+				<div className='products-overview-information'>
+					<img
+						src='https://images.unsplash.com/photo-1569267034662-77399a614620?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+						alt='products pet shop background'
+					/>
+					<h1>
+						Descubra o Melhor para o Seu Pet: Nutrição, Diversão e Bem- Estar
+					</h1>
+					<div className='products-category-links'>
+						<a href='food'>
+							<img
+								src='https://cdn-icons-png.flaticon.com/512/3737/3737726.png'
+								alt='pet food icon'
+							/>
+							Comidas
+						</a>
+						<a href='toys'>
+							<img
+								src='https://cdn-icons-png.flaticon.com/512/4293/4293048.png'
+								alt='pets toys icon'
+							/>
+							Brinquedos
+						</a>
+						<a href='accesories'>
+							<img
+								src='https://cdn-icons-png.flaticon.com/512/1279/1279247.png'
+								alt='pets accessories icon'
+							/>
+							Acessórios
+						</a>
+					</div>
+				</div>
+			</div>
+			<h3>Cães (Comidas, Brinquedos, Acessórios)</h3>
+			<div className='products-section'>
+				{productsData.dogs.food.map((product) => (
+					<div
+						key={product.id}
+						className='product-slice'
+					>
+						<div className='product-image'>
+							<img
+								src={product.foto}
+								alt='products'
+							/>
+						</div>
+						<div className='product-description'>
+							<p>{product.descripcion}</p>
+						</div>
+						<p className='adoption-indication'>R$ {product.precio}</p>
+						<button className='add-to-cart-btn'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								version='1.1'
@@ -48,22 +86,26 @@ function Products() {
 								</g>
 							</svg>
 						</button>
-          </div>
-        ))
-      }
-    </div>
-    <div className='products-section'>
-      {
-        productsData.dogs.accesorios.map((product) => (
-          <div key={product.id} className='product-slice'>
-            <div className="product-image">
-            <img src={product.foto} alt='products' />
-            </div>
-            <div className="product-description">
-                <p>{product.descripcion}</p>
-            </div>
-            <p className='adoption-indication'>R$ {product.precio}</p>
-            <button className='add-to-cart-btn'>
+					</div>
+				))}
+			</div>
+			<div className='products-section'>
+				{productsData.dogs.accesorios.map((product) => (
+					<div
+						key={product.id}
+						className='product-slice'
+					>
+						<div className='product-image'>
+							<img
+								src={product.foto}
+								alt='products'
+							/>
+						</div>
+						<div className='product-description'>
+							<p>{product.descripcion}</p>
+						</div>
+						<p className='adoption-indication'>R$ {product.precio}</p>
+						<button className='add-to-cart-btn'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								version='1.1'
@@ -94,23 +136,27 @@ function Products() {
 								</g>
 							</svg>
 						</button>
-          </div>
-        ))
-      }
-    </div>
-    <h3>Gatos</h3>
-    <div className='products-section'>
-      {
-        productsData.gatos.comida.map((product) => (
-          <div key={product.id} className='product-slice'>
-            <div className="product-image">
-            <img src={product.foto} alt='products' />
-            </div>
-            <div className="product-description">
-                <p>{product.descripcion}</p>
-            </div>
-            <p className='adoption-indication'>R$ {product.precio}</p>
-            <button className='add-to-cart-btn'>
+					</div>
+				))}
+			</div>
+			<h3>Gatos (Comidas, Brinquedos, Acessórios)</h3>
+			<div className='products-section'>
+				{productsData.gatos.comida.map((product) => (
+					<div
+						key={product.id}
+						className='product-slice'
+					>
+						<div className='product-image'>
+							<img
+								src={product.foto}
+								alt='products'
+							/>
+						</div>
+						<div className='product-description'>
+							<p>{product.descripcion}</p>
+						</div>
+						<p className='adoption-indication'>R$ {product.precio}</p>
+						<button className='add-to-cart-btn'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								version='1.1'
@@ -141,22 +187,26 @@ function Products() {
 								</g>
 							</svg>
 						</button>
-          </div>
-        ))
-      }
-    </div>
-    <div className='products-section'>
-      {
-        productsData.gatos.accesorios.map((product) => (
-          <div key={product.id} className='product-slice'>
-            <div className="product-image">
-            <img src={product.foto} alt='products' />
-            </div>
-            <div className="product-description">
-                <p>{product.descripcion}</p>
-            </div>
-            <p className='adoption-indication'>R$ {product.precio}</p>
-            <button className='add-to-cart-btn'>
+					</div>
+				))}
+			</div>
+			<div className='products-section'>
+				{productsData.gatos.accesorios.map((product) => (
+					<div
+						key={product.id}
+						className='product-slice'
+					>
+						<div className='product-image'>
+							<img
+								src={product.foto}
+								alt='products'
+							/>
+						</div>
+						<div className='product-description'>
+							<p>{product.descripcion}</p>
+						</div>
+						<p className='adoption-indication'>R$ {product.precio}</p>
+						<button className='add-to-cart-btn'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								version='1.1'
@@ -187,23 +237,27 @@ function Products() {
 								</g>
 							</svg>
 						</button>
-          </div>
-        ))
-      }
-    </div>
-    <h3>Aves</h3>
-    <div className='products-section'>
-      {
-        productsData.birds.food.map((product) => (
-          <div key={product.id} className='product-slice'>
-            <div className="product-image">
-            <img src={product.foto} alt='products' />
-            </div>
-            <div className="product-description">
-                <p>{product.descripcion}</p>
-            </div>
-            <p className='adoption-indication'>R$ {product.precio}</p>
-            <button className='add-to-cart-btn'>
+					</div>
+				))}
+			</div>
+			<h3>Aves (Comidas, Acessórios)</h3>
+			<div className='products-section'>
+				{productsData.birds.food.map((product) => (
+					<div
+						key={product.id}
+						className='product-slice'
+					>
+						<div className='product-image'>
+							<img
+								src={product.foto}
+								alt='products'
+							/>
+						</div>
+						<div className='product-description'>
+							<p>{product.descripcion}</p>
+						</div>
+						<p className='adoption-indication'>R$ {product.precio}</p>
+						<button className='add-to-cart-btn'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								version='1.1'
@@ -234,22 +288,26 @@ function Products() {
 								</g>
 							</svg>
 						</button>
-          </div>
-        ))
-      }
-    </div>
-    <div className='products-section'>
-      {
-        productsData.birds.accesorios.map((product) => (
-          <div key={product.id} className='product-slice'>
-            <div className="product-image">
-            <img src={product.foto} alt='products' />
-            </div>
-            <div className="product-description">
-                <p>{product.descripcion}</p>
-            </div>
-            <p className='adoption-indication'>R$ {product.precio}</p>
-            <button className='add-to-cart-btn'>
+					</div>
+				))}
+			</div>
+			<div className='products-section'>
+				{productsData.birds.accesorios.map((product) => (
+					<div
+						key={product.id}
+						className='product-slice'
+					>
+						<div className='product-image'>
+							<img
+								src={product.foto}
+								alt='products'
+							/>
+						</div>
+						<div className='product-description'>
+							<p>{product.descripcion}</p>
+						</div>
+						<p className='adoption-indication'>R$ {product.precio}</p>
+						<button className='add-to-cart-btn'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								version='1.1'
@@ -280,12 +338,11 @@ function Products() {
 								</g>
 							</svg>
 						</button>
-          </div>
-        ))
-      }
-    </div>
-    </div>
-  )
+					</div>
+				))}
+			</div>
+		</div>
+	);
 }
 
-export default Products
+export default Products;
