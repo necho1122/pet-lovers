@@ -111,41 +111,6 @@ const Carousel: React.FC<{ slides: Slide[] }> = ({ slides }) => {
 	);
 };
 
-/*const MainCarousel: React.FC<{ slides: MainSlide[] }> = ({ slides }) => {
-	const [currentSlide, setCurrentSlide] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-		}, 5000);
-
-		return () => {
-			clearInterval(interval);
-		};
-	}, [slides.length]);
-
-	return (
-		<div className='main-carousel'>
-			{slides.map((slide, index) =>
-				currentSlide === index ? (
-					<div
-						className='main-slide'
-						key={index}
-						style={{ backgroundImage: `url(${slide.backgroundImageUrl})` }}
-					>
-						<h2>{slide.title}</h2>
-						<img
-							src={logoVertical}
-							alt={slide.title}
-						/>
-					</div>
-				) : null
-			)}
-		</div>
-	);
-};
-*/
-
 const Home: React.FC = () => {
 	const { pets, dogs, gatos, birds } = productsData;
 	const sections = [

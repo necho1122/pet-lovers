@@ -3,10 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import Pets from './components/Pets';
-import Products from './components/Products';
+import Products from './components/products/Products';
 import Vet from './components/Vet';
 import Services from './components/Services';
 import ContactUs from './components/ContactUs';
+import Cart from './components/Cart';
 
 function App() {
 	return (
@@ -40,6 +41,10 @@ function App() {
 						<Route
 							path='/contact'
 							element={<ContactUs />}
+						/>
+						<Route
+							path='/cart'
+							element={<Cart />}
 						/>
 					</Route>
 				</Routes>

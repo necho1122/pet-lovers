@@ -134,3 +134,11 @@
     opacity: 1;
     z-index: 1;
 }
+
+.toys-section
+{
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #DFDCE3;
+}
