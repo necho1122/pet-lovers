@@ -5,40 +5,49 @@
     justify-content: center;
     align-items: start;
     margin: 1rem;
-
 }
 
 .shopping-cart-container ul
 {
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .shopping-cart-container ul li
 {
     list-style-type: none;
-    margin: 0.5rem;
-    padding: 0.2rem 0.5rem;
+    margin: 0.5rem 1rem;
     border-radius: 0.5rem;
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #DFDCE3;
+    width: 100%;
+}
+
+.item-in-cart
+{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    box-shadow: 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #DFDCE3;
-
+    padding: .2rem 1rem;
 }
 
 .shopping-cart-container ul li p
 {
-
+    padding: 0;
+    margin: 0;
     color: #333;
+    font-size: .8rem;
 }
 
 .shopping-cart-container ul li img
 {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 85px;
     border-radius: 0.5rem;
 }
 
@@ -52,11 +61,211 @@
     cursor: pointer;
 }
 
+.qty-price
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: .5rem;
+    gap: 1rem;
+}
+
+.shopping-cart-container .price-note
+{
+    color: #FC4A1A;
+    font-size: 1rem;
+}
+
+.shopping-cart-container .item-quantity
+{
+    font-size: 1rem;
+}
+
+.qty-section
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5rem;
+}
+
+.shopping-cart-container .qty-section button
+{
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: .2rem 0.5rem;
+    cursor: pointer;
+}
+
+.shopping-cart-container .item-quantity
+{
+    margin: 0 .5rem;
+}
+
 .truncate
 {
-    display: inline-block;
-    max-width: 20ch;
+    width: 200px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    font-weight: 600;
+}
+
+.cart-buttons-container
+{
+    display: inline-block;
+    width: 100%;
+}
+
+.clear-buy-btn
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    margin: .5rem 0;
+}
+
+.clear-buy-btn button
+{
+    background-color: #333;
+    color: white;
+
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.clear-buy-btn button:hover
+{
+    background-color: #DFDCE3;
+    color: #333;
+
+}
+
+.go-to-home a
+{
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.go-to-home a img
+{
+    width: 20px;
+    height: 20px;
+    margin-right: .5rem;
+}
+
+@media (max-width: 480px)
+{
+    .shopping-cart-container ul li img
+    {
+        width: 60px;
+        height: 65px;
+    }
+
+    .shopping-cart-container ul li p,
+    .shopping-cart-container .item-quantity
+    {
+        font-size: .8rem;
+    }
+
+    .shopping-cart-container .price-note
+    {
+        font-size: .95rem;
+    }
+
+    .shopping-cart-container .qty-section button
+    {
+        padding: .1rem .3rem;
+    }
+
+    .shopping-cart-container ul li
+    {
+        margin: 0.5rem 0;
+    }
+
+    .clear-buy-btn button
+    {
+        font-size: 1rem;
+        padding: .7rem;
+    }
+}
+
+@media (max-width: 360px)
+{
+    .shopping-cart-container ul li img
+    {
+        width: 50px;
+        height: 55px;
+    }
+
+    .shopping-cart-container ul li p,
+    .shopping-cart-container .price-note,
+    .shopping-cart-container .item-quantity
+    {
+        font-size: .7rem;
+    }
+
+    .shopping-cart-container .qty-section button,
+    .shopping-cart-container ul li button
+    {
+        padding: .1rem .2rem;
+    }
+
+    .truncate
+    {
+        width: 150px;
+    }
+
+    .clear-buy-btn button
+    {
+        font-size: .8rem;
+        padding: .5rem;
+    }
+}
+
+@media (min-width: 720px)
+{
+    .product-description
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        margin: 0 2rem;
+    }
+
+    .truncate
+    {
+        width: 350px;
+    }
+
+    .qty-price
+    {
+        width: auto;
+    }
+
+    .clear-buy-btn button
+    {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
 }

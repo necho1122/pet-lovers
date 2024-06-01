@@ -75,6 +75,7 @@ nav
     border: none;
     border-radius: 50%;
     padding: .5rem;
+    position: relative;
 }
 
 .btn-cart:hover
@@ -141,6 +142,18 @@ nav
     height: 20px;
     padding: 0%;
     margin: 0;
+}
+
+.quantity-in-cart
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FC4A1A;
+    color: #DFDCE3;
+    border-radius: 50%;
+    padding: .15rem .4rem;
+    font-size: 14px;
 }
 
 @media (max-width: 575.98px)

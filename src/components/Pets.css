@@ -40,6 +40,7 @@
 .adoption-indication
 {
     color: #3a3a3a;
+    font-weight: 600;
 }
 
 .pet-slice
@@ -54,7 +55,7 @@
     border: 2px solid #DFDCE3;
     border-radius: 5px;
     color: #333;
-
+    overflow: hidden;
 }
 
 .pet-slice p
@@ -143,4 +144,43 @@
     position: relative;
     opacity: 1;
     z-index: 1;
+}
+
+@media (max-width: 480px)
+{
+    .pets-category-links
+    {
+        padding: .5rem;
+        gap: .5rem;
+    }
+
+    .pets-category-links a
+    {
+        font-size: .9rem;
+        padding: .5rem 0;
+    }
+
+    .pets-category-links img
+    {
+        width: 35px;
+        height: 35px;
+        position: relative;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .pets-section
+    {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .pet-description p
+    {
+        font-size: .9rem;
+    }
+
+    .adoption-indication
+    {
+        font-size: .9rem;
+    }
 }

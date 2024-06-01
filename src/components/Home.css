@@ -223,25 +223,33 @@ h3
     padding: 0.3rem 1rem;
 }
 
-@media (max-width: 575.98px)
+/* Media Queries */
+
+@media (max-width: 480px)
 {
-    .home-overview
+    .home-overview-image
     {
-        flex-direction: column;
+        display: none;
     }
 
-    .home-overview-information h1
+    .home-overview,
+    .home-overview-information
     {
-        padding-top: 0;
-        margin-top: 0;
+        padding: 0;
     }
+
+    .home-app h2
+    {
+        padding-top: 2rem;
+    }
+
 }
 
-@media (max-width: 680px)
+@media (max-width: 768px)
 {
     .home-overview
     {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .home-overview-image

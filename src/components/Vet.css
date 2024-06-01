@@ -135,6 +135,11 @@ h1
     padding-left: 3rem;
 }
 
+.vet-services h2
+{
+    color: #DFDCE3;
+}
+
 @media screen and (max-width: 680px)
 {
     .vet-overview-section
@@ -168,4 +173,65 @@ h1
     {
         padding-left: 0;
     }
+}
+
+@media (max-width: 480px)
+{
+    .vet-services ul
+    {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .vet-services ul li
+    {
+        padding: 0 0.3rem;
+    }
+
+    .vet-services ul li p
+    {
+        font-size: 0.8rem;
+    }
+
+    .vet-services h4
+    {
+        font-size: 0.8rem;
+    }
+
+    .vet-services-image
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+    .vet-services-image img
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+    .vet-overview-information h1
+    {
+        font-size: 1.5rem;
+    }
+
+    .links-vet-section a
+    {
+        font-size: 0.8rem;
+    }
+
+    .vet-container
+    {
+        margin: 0.5rem 0;
+    }
+
+    .vet-services ul li a
+    {
+        padding: 0.5rem 0.3rem;
+    }
+
+    .vet-services ul li
+    {
+        padding: 0 0.3rem;
+    }
+
 }

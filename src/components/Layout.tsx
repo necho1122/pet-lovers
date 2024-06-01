@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import './Layout.css';
 
 function Layout() {
@@ -7,9 +8,7 @@ function Layout() {
 		<div>
 			<Navbar />
 			<Outlet />
-			<footer>
-				<p>© 2024 Pet lovers</p>
-			</footer>
+			<Footer />
 		</div>
 	);
 }

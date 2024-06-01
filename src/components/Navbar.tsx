@@ -1,8 +1,16 @@
 import './Navbar.css';
 import petLoversLogo from '../assets/pet-lovers-logo-vertical.png';
 import petLoversLogoText from '../assets/pet-lovers-logo-only-text.png';
+import { useSelector } from 'react-redux';
+import { selectTotalQuantity } from '../store/cartSlice';
 
 function Navbar() {
+	const handleRedirect = () => {
+		window.location.href = '/cart';
+	};
+
+	const totalQuantity = useSelector(selectTotalQuantity);
+
 	return (
 		<div className='navbar'>
 			<nav>
@@ -38,11 +46,15 @@ function Navbar() {
 							/>
 						</button>
 					</div>
-					<button className='btn-cart'>
+					<button
+						className='btn-cart'
+						onClick={handleRedirect}
+					>
 						<img
 							src='https://cdn-icons-png.flaticon.com/512/3144/3144456.png'
 							alt='cart icon'
 						/>
+						<span className='quantity-in-cart'>{totalQuantity}</span>
 					</button>
 				</div>
 				<ul>
@@ -89,15 +101,6 @@ function Navbar() {
 								alt='veterinary icon'
 							/>
 							<span className='menu-option'>Veterinaria</span>
-						</a>
-					</li>
-					<li>
-						<a href='/contact'>
-							<img
-								src='https://cdn-icons-png.flaticon.com/512/1067/1067617.png'
-								alt='contact icon'
-							/>{' '}
-							<span className='menu-option'>Contato</span>
 						</a>
 					</li>
 				</ul>

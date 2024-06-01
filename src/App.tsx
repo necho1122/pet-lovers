@@ -8,6 +8,7 @@ import Vet from './components/Vet';
 import Services from './components/Services';
 import ContactUs from './components/ContactUs';
 import Cart from './components/Cart';
+import PaymentForm from './components/PaymentForm';
 
 function App() {
 	return (
@@ -42,11 +43,15 @@ function App() {
 							path='/contact'
 							element={<ContactUs />}
 						/>
-						<Route
-							path='/cart'
-							element={<Cart />}
-						/>
 					</Route>
+					<Route
+						path='/cart'
+						element={<Cart />}
+					/>
+					<Route
+						path='/payment'
+						element={<PaymentForm />}
+					/>
 				</Routes>
 			</BrowserRouter>
 		</>

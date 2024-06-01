@@ -128,17 +128,22 @@
     max-width: 100%;
 }
 
+.list-pet-services h2
+{
+    color: #DFDCE3;
+}
+
 .list-pet-services h4
 {
     font-size: 1rem;
     font-weight: 700;
 }
 
-@media screen and (max-width: 680px)
+@media (max-width: 680px)
 {
     .services-overview
     {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .links-services-section
@@ -151,4 +156,44 @@
         font-size: 2rem;
         padding-left: .5rem;
     }
+}
+
+@media (max-width: 480px)
+{
+
+    .services-overview
+    {
+        flex-direction: column;
+    }
+
+    .services-image-section img
+    {
+        max-width: 250px;
+    }
+
+    .services-overview
+    {
+        min-height: auto;
+    }
+
+    .list-pet-services ul
+    {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .overview-information h1
+    {
+        font-size: 1.5rem;
+    }
+
+    .links-services-section
+    {
+        margin: 0;
+    }
+
+    .links-services-section a
+    {
+        font-size: .8rem;
+    }
+
 }
