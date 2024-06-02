@@ -1,3 +1,11 @@
+.cart-footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
 .shopping-cart-container
 {
     display: flex;
@@ -170,6 +178,7 @@
     height: 20px;
     margin-right: .5rem;
 }
+
 
 @media (max-width: 480px)
 {

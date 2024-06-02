@@ -9,6 +9,7 @@ import {
 } from '../store/cartSlice';
 import { BinIcon } from './Icons';
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = () => {
@@ -17,11 +18,23 @@ const Cart = () => {
 	const totalQuantity = useSelector(selectTotalQuantity);
 	const totalPrice = useSelector(selectTotalPrice);
 
+	const navigate = useNavigate();
+
+	const handleSubmit = () => {
+		navigate('/payment');
+	};
+
 	return (
-		<>
+		<div className='cart-footer'>
 			<div className='shopping-cart-container'>
-				<div className="go-to-home">
-					<a href="/"><img src="https://cdn-icons-png.flaticon.com/512/2550/2550430.png" alt="home icon" /> Home</a>
+				<div className='go-to-home'>
+					<a href='/'>
+						<img
+							src='https://cdn-icons-png.flaticon.com/512/2550/2550430.png'
+							alt='home icon'
+						/>{' '}
+						Home
+					</a>
 				</div>
 				<h2>Shopping Cart</h2>
 				<ul>
@@ -52,7 +65,10 @@ const Cart = () => {
 				</ul>
 				<div className='cart-buttons-container'>
 					<div className='clear-buy-btn'>
-						<button className='buy-btn'>
+						<button
+							className='buy-btn'
+							onClick={handleSubmit}
+						>
 							Comprar R$<span>{totalPrice.toFixed(2)}</span>{' '}
 							<span>({totalQuantity} item)</span>
 						</button>
@@ -60,7 +76,7 @@ const Cart = () => {
 				</div>
 			</div>
 			<Footer />
-		</>
+		</div>
 	);
 };
 
