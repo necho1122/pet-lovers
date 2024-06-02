@@ -4,12 +4,9 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 
 const app = express();
-const stripe = new Stripe(
-	'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',
-	{
-		apiVersion: '2022-11-15',
-	}
-);
+const stripe = new Stripe('private-key-here', {
+	apiVersion: '2022-11-15',
+});
 
 app.use(bodyParser.json());
 app.use(cors());
