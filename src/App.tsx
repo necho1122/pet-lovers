@@ -15,43 +15,50 @@ function App() {
 		<>
 			<BrowserRouter>
 				<Routes>
+					{/* Rutas de páginas */}
 					<Route
 						path='/'
 						element={<Layout />}
 					>
 						<Route
-							path='/'
+							index
 							element={<Home />}
 						/>
 						<Route
-							path='/pets'
+							path='pets'
 							element={<Pets />}
 						/>
 						<Route
-							path='/products'
+							path='products'
 							element={<Products />}
 						/>
 						<Route
-							path='/veterinary'
+							path='veterinary'
 							element={<Vet />}
 						/>
 						<Route
-							path='/services'
+							path='services'
 							element={<Services />}
 						/>
 						<Route
-							path='/contact'
+							path='contact'
 							element={<ContactUs />}
 						/>
+						<Route
+							path='*'
+							element={<h1>Page not found at Pet Lovers</h1>}
+						/>
 					</Route>
+					{/* Rutas para otros componentes */}
 					<Route
-						path='/cart'
+						path='cart'
 						element={<Cart />}
 					/>
 					<Route
-						path='/payment'
+						path='payment'
 						element={<PaymentForm />}
 					/>
+					{/* Redireccionar cualquier otra ruta a la página principal */}
 				</Routes>
 			</BrowserRouter>
 		</>
