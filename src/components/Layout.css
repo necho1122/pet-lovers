@@ -43,7 +43,7 @@ footer
 {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     width: 100%;
@@ -91,35 +91,42 @@ footer
     color: #ccc;
 }
 
-/* Estilos para pantallas menores que 420px */
+
 @media screen and (max-width: 420px)
 {
     footer
     {
         padding: 20px;
-        /* Cambiar el padding */
         margin: 1rem 0;
-        /* Cambiar el margen */
     }
 
     .footer__container
     {
         flex-direction: column;
-        /* Cambiar la dirección del flexbox */
     }
 
     .footer__logo img
     {
         margin-left: 0;
-        /* Eliminar el margen izquierdo */
         margin-bottom: 1rem;
-        /* Agregar margen inferior */
     }
 
     .footer__links a,
     .footer__social a
     {
         margin: 0 10px 10px 10px;
-        /* Ajustar los márgenes */
     }
+}
+
+@media screen and (max-width: 620px)
+{
+    .footer__links
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
 }

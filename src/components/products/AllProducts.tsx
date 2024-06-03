@@ -1,7 +1,7 @@
 //AllProducts.tsx
-import { useDispatch } from 'react-redux';
 import productsData from '../../mocks/productsData.json';
 import { AddToCartButton } from '../Icons';
+import { useDispatch } from 'react-redux';
 import { addItem } from '../../store/cartSlice';
 
 function AllProducts() {
