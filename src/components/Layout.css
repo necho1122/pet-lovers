@@ -1,3 +1,4 @@
+/* Estilos por defecto */
 footer
 {
     background-color: #333;
@@ -13,28 +14,112 @@ footer
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-footer p
+.footer
 {
-    padding-left: 2rem;
+    background-color: #333;
+    color: #fff;
+    padding: .5rem 0;
 }
 
-footer a
+.footer__container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__page-information
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer__creator
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.footer__creator img
+{
+    width: 25px;
+}
+
+.footer__logo img
+{
+    width: 100px;
+    filter: drop-shadow(0 0 5px #ccc);
+    margin-left: 1rem;
+}
+
+.footer__links img
+{
+    width: 20px;
+}
+
+.footer__links a
 {
     color: #fff;
     text-decoration: none;
-
+    margin-right: 20px;
 }
 
-footer a img
+.footer__links a:hover
 {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0.5rem;
+    text-decoration: underline;
 }
 
-footer li
+.footer__social a
 {
-    list-style-type: none;
-    display: inline;
-    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer__social a:hover
+{
+    color: #ccc;
+}
+
+/* Estilos para pantallas menores que 420px */
+@media screen and (max-width: 420px)
+{
+    footer
+    {
+        padding: 20px;
+        /* Cambiar el padding */
+        margin: 1rem 0;
+        /* Cambiar el margen */
+    }
+
+    .footer__container
+    {
+        flex-direction: column;
+        /* Cambiar la dirección del flexbox */
+    }
+
+    .footer__logo img
+    {
+        margin-left: 0;
+        /* Eliminar el margen izquierdo */
+        margin-bottom: 1rem;
+        /* Agregar margen inferior */
+    }
+
+    .footer__links a,
+    .footer__social a
+    {
+        margin: 0 10px 10px 10px;
+        /* Ajustar los márgenes */
+    }
 }

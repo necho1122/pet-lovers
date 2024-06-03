@@ -118,21 +118,23 @@ nav
     gap: 0;
 }
 
-.input-group input
+.upper-bar .input-group input
 {
     width: 100%;
     padding: .7rem;
     background-color: #DFDCE3;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 50px 0px 0px 50px;
+    margin: 0;
 }
 
-.input-group button
+.upper-bar .input-group button
 {
     background-color: #F7B733;
     border: none;
     border-radius: 0px 50px 50px 0px;
     padding: .48rem 1rem;
+    max-width: 60px;
 
 }
 

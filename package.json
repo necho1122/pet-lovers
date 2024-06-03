@@ -5,18 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build": "vite build",
+    "start": "node dist/server.js",
+    "server": "ts-node src/server.ts",
+    "server:build": "tsc --project tsconfig.server.json && node dist/server.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
     "@stripe/react-stripe-js": "^2.7.1",
     "@stripe/stripe-js": "^3.4.1",
-    "body-parser": "^1.20.2",
     "bootstrap": "5.3.3",
-    "cors": "^2.8.5",
     "express": "^4.19.2",
+    "process": "^0.11.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
@@ -29,7 +31,7 @@
     "@types/body-parser": "^1.19.5",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/node": "^20.13.0",
+    "@types/node": "^20.14.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
