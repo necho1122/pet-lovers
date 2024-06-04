@@ -14,6 +14,15 @@ const PaymentForm: React.FC = () => {
 
 	return (
 		<div className='ckeckout-form-container'>
+			<div className='go-to-home'>
+				<a href='/'>
+					<img
+						src='https://cdn-icons-png.flaticon.com/512/2550/2550430.png'
+						alt='home icon'
+					/>{' '}
+					Home
+				</a>
+			</div>
 			<div className='row'>
 				<div className='col-75'>
 					<div className='container'>

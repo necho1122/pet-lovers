@@ -13,8 +13,8 @@ function Vet() {
 						Animais de Estimação
 					</h1>
 					<div className='links-vet-section'>
-						<a href='to-the-moon'>Veterinário</a>
-						<a href='to-the-sun'>Emergência</a>
+						<a href='#'>Veterinário</a>
+						<a href='#'>Emergência</a>
 					</div>
 				</div>
 				<div className='vet-image-section vet-container-child'>
