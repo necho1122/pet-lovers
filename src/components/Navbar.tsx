@@ -3,12 +3,13 @@ import petLoversLogo from '../assets/pet-lovers-logo-vertical.png';
 import petLoversLogoText from '../assets/pet-lovers-logo-only-text.png';
 import { useSelector } from 'react-redux';
 import { selectTotalQuantity } from '../store/cartSlice';
+import { useState } from 'react';
 
 function Navbar() {
+	const [menuOpen, setMenuOpen] = useState(false);
 	const handleRedirect = () => {
 		window.location.href = '/cart';
 	};
-
 	const totalQuantity = useSelector(selectTotalQuantity);
 
 	return (
@@ -31,7 +32,7 @@ function Navbar() {
 						<input
 							type='text'
 							className='form-control'
-							placeholder='O que está procurando?'
+							placeholder='O que procura?'
 							aria-label='O que está procurando?'
 							aria-describedby='button-addon2'
 						/>
@@ -56,8 +57,16 @@ function Navbar() {
 						/>
 						<span className='quantity-in-cart'>{totalQuantity}</span>
 					</button>
+					{/* Botón hamburguesa solo en mobile */}
+					<button
+						className='navbar-toggle'
+						onClick={() => setMenuOpen((v) => !v)}
+						aria-label='Abrir menú de navegación'
+					>
+						<span className='navbar-toggle-icon'>☰</span>
+					</button>
 				</div>
-				<ul>
+				<ul className={`navbar-menu${menuOpen ? ' open' : ''}`}>
 					<li>
 						<a href='/'>
 							<img
