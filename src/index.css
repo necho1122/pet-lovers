@@ -1,18 +1,7 @@
-:root
-{
+/* Remove conflicting root and body styles, and import new base styles */
+@import './styles/base.css';
+
+/* Optionally, you can keep only the font-family if you want Roboto as a fallback */
+/* :root {
   font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: #DFDCE3;
-  background-color: #4ABDAC;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-body
-{
-  margin: 0;
-  padding: 0;
-}
+} */

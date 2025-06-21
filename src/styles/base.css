@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import './theme.css';
+
+html,
+body
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after
+{
+  box-sizing: inherit;
+}
+
+a
+{
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover
+{
+  color: var(--color-accent);
+}
+
+button,
+input,
+select,
+textarea
+{
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+button
+{
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(58, 90, 153, 0.04);
+}
+
+button:hover,
+button:focus
+{
+  background: var(--color-secondary);
+}
+
+hr
+{
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2em 0;
+}
+
+::-webkit-scrollbar
+{
+  width: 8px;
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.container
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Utility classes */
+.text-muted
+{
+  color: var(--color-muted);
+}
+
+.bg-surface
+{
+  background: var(--color-surface);
+}
+
+.shadow
+{
+  box-shadow: 0 2px 8px rgba(58, 90, 153, 0.08);
+}
+
+.rounded
+{
+  border-radius: 8px;
+}
