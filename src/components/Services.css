@@ -4,9 +4,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    margin: 1rem;
-
+    gap: 1.5rem;
+    margin: 1.5rem 0.5rem;
+    background: var(--color-bg);
+    min-height: 100vh;
 }
 
 .services-overview
@@ -15,7 +16,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(58, 90, 153, 0.08);
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
 }
 
 .services-image-section
@@ -29,70 +35,104 @@
 
 .services-image-section img
 {
-    object-fit: cover;
-    max-width: 100%;
-    min-width: 200px;
-}
-
-.child
-{
-    width: 100%;
-    flex: 1;
+    object-fit: contain;
+    max-width: 260px;
+    min-width: 120px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(58, 90, 153, 0.06);
+    background: var(--color-white);
 }
 
 .overview-information h1
 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin-bottom: 1.2rem;
+    text-shadow: 1px 1px 8px rgba(34, 46, 58, 0.10);
 }
 
 .links-services-section
 {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    margin-left: 3rem;
+    margin-left: 0;
 }
 
 .links-services-section a
 {
-    text-decoration: none;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    border: none;
+    border-radius: 24px;
+    padding: 0.5rem 1.2rem;
+    font-weight: var(--font-weight-bold);
     font-size: 1rem;
-    font-weight: 700;
-    color: #DFDCE3;
-    border: #DFDCE3 2px solid;
-    border-radius: 5px;
-    padding: .3rem 1rem;
+    box-shadow: 0 2px 8px rgba(58, 90, 153, 0.08);
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.links-services-section a:hover
+{
+    background: var(--color-primary);
+    color: var(--color-white);
 }
 
 .list-pet-services
 {
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem auto 0 auto;
+    background: var(--color-surface);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(58, 90, 153, 0.06);
+    padding: 2rem 1.5rem;
+}
+
+.list-pet-services h2
+{
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .list-pet-services ul
 {
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2rem;
     padding: 0;
+    margin: 0;
 }
 
 .list-pet-services li
 {
-    border: 1px solid #DFDCE3;
-    border-radius: 5px;
+    border: 1.5px solid var(--color-border);
+    border-radius: 12px;
     text-align: center;
-    background-color: #F7B733;
-    color: #333;
+    background: var(--color-white);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
+    box-shadow: 0 2px 8px rgba(58, 90, 153, 0.04);
+    transition: box-shadow 0.2s, border 0.2s;
+    padding: 1.2rem 0.7rem 1.5rem 0.7rem;
+}
+
+.list-pet-services li:hover
+{
+    box-shadow: 0 4px 16px rgba(58, 90, 153, 0.10);
+    border: 1.5px solid var(--color-primary);
 }
 
 .list-pet-services li a
@@ -102,98 +142,90 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #333;
-    padding: 1rem .5rem;
-
+    color: var(--color-primary);
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .list-pet-services-image
 {
-    width: 50px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background-color: #DFDCE3;
+    background: var(--color-surface);
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    padding: .5rem;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 1px 4px rgba(58, 90, 153, 0.04);
 }
 
 .list-pet-services-image img
 {
-    object-fit: cover;
+    object-fit: contain;
+    width: 36px;
+    height: 36px;
     padding: 0;
     margin: 0;
-    max-width: 100%;
-}
-
-.list-pet-services h2
-{
-    color: #DFDCE3;
 }
 
 .list-pet-services h4
 {
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.08rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin: 0.5rem 0 0.2rem 0;
 }
 
-@media (max-width: 680px)
+.list-pet-services p
+{
+    color: var(--color-text);
+    font-size: 0.98rem;
+    margin: 0.2rem 0 0 0;
+    padding: 0 0.2rem;
+    text-align: center;
+    line-height: 1.4;
+    min-height: 2.2em;
+}
+
+@media (max-width: 900px)
 {
     .services-overview
     {
-        flex-direction: row;
+        flex-direction: column;
+        padding: 1.2rem 0.5rem;
+        gap: 1.2rem;
     }
 
-    .links-services-section
+    .list-pet-services
     {
-        margin: 0;
+        padding: 1.2rem 0.5rem;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .list-pet-services ul
+    {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
-    .overview-information h1
+    .services-image-section img
     {
-        font-size: 2rem;
-        padding-left: .5rem;
+        max-width: 180px;
     }
 }
 
 @media (max-width: 480px)
 {
-
-    .services-overview
-    {
-        flex-direction: column;
-    }
-
-    .services-image-section img
-    {
-        max-width: 250px;
-    }
-
-    .services-overview
-    {
-        min-height: auto;
-    }
-
-    .list-pet-services ul
-    {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    }
-
     .overview-information h1
     {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
-    .links-services-section
+    .list-pet-services
     {
-        margin: 0;
+        padding: 0.7rem 0.2rem;
     }
-
-    .links-services-section a
-    {
-        font-size: .8rem;
-    }
-
 }
