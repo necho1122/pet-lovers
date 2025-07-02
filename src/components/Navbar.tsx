@@ -1,9 +1,9 @@
 import './Navbar.css';
 import petLoversLogo from '../assets/pet-lovers-logo-vertical.png';
-import petLoversLogoText from '../assets/pet-lovers-logo-only-text.png';
 import { useSelector } from 'react-redux';
 import { selectTotalQuantity } from '../store/cartSlice';
 import { useState } from 'react';
+import { ThreeBars } from './Icons';
 
 function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -16,18 +16,21 @@ function Navbar() {
 		<div className='navbar'>
 			<nav>
 				<div className='upper-bar upper-bar-nav'>
+					<button
+						className='navbar-toggle'
+						onClick={() => setMenuOpen((v) => !v)}
+						aria-label='Abrir menú de navegación'
+					>
+						<ThreeBars />
+					</button>
 					<a href='/'>
-						<img
-							className='pet-lovers-logo-text'
-							src={petLoversLogoText}
-							alt='pet lovers logo text'
-						/>
 						<img
 							className='pet-lovers-logo'
 							src={petLoversLogo}
 							alt='pet lovers logo'
 						/>
 					</a>
+
 					<div className='input-group'>
 						<input
 							type='text'
@@ -37,7 +40,7 @@ function Navbar() {
 							aria-describedby='button-addon2'
 						/>
 						<button
-							className='btn btn-outline-secondary'
+							className='btn-outline-secondary'
 							type='button'
 							id='button-addon2'
 						>
@@ -56,14 +59,6 @@ function Navbar() {
 							alt='cart icon'
 						/>
 						<span className='quantity-in-cart'>{totalQuantity}</span>
-					</button>
-					{/* Botón hamburguesa solo en mobile */}
-					<button
-						className='navbar-toggle'
-						onClick={() => setMenuOpen((v) => !v)}
-						aria-label='Abrir menú de navegación'
-					>
-						<span className='navbar-toggle-icon'>☰</span>
 					</button>
 				</div>
 				<ul className={`navbar-menu${menuOpen ? ' open' : ''}`}>
