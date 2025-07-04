@@ -4,6 +4,7 @@ import productsData from '../mocks/productsData.json';
 import sitCat from '../assets/red-white-cat.webp';
 import './Home.css';
 import { AddToCartButton } from './Icons';
+import type { Data } from '../types';
 
 interface Slide {
 	foto: string;
@@ -80,15 +81,15 @@ const Carousel: React.FC<{ slides: Slide[] }> = ({ slides }) => {
 };
 
 const Home: React.FC = () => {
-	const { pets, dogs, gatos, birds } = productsData;
-	const sections = [
-		{ title: 'Pets para adoção', slides: pets.adoption },
-		{ title: 'Comida para cães', slides: dogs.food },
-		{ title: 'Acessórios para cães', slides: dogs.accesorios },
-		{ title: 'Comida para gatos', slides: gatos.comida },
-		{ title: 'Acessórios para gatos', slides: gatos.accesorios },
-		{ title: 'Comida para aves', slides: birds.food },
-		{ title: 'Acessórios para aves', slides: birds.accesorios },
+	const { pets, dogs, gatos, birds } = productsData as Data;
+	const sections: { title: string; slides: Slide[] }[] = [
+		{ title: 'Pets para adoção', slides: pets.adoption as Slide[] },
+		{ title: 'Comida para cães', slides: dogs.food as Slide[] },
+		{ title: 'Acessórios para cães', slides: dogs.accesorios as Slide[] },
+		{ title: 'Comida para gatos', slides: gatos.comida as Slide[] },
+		{ title: 'Acessórios para gatos', slides: gatos.accesorios as Slide[] },
+		{ title: 'Comida para aves', slides: birds.food as Slide[] },
+		{ title: 'Acessórios para aves', slides: birds.accesorios as Slide[] },
 	];
 
 	return (
