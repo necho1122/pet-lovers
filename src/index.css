@@ -1,7 +1,48 @@
-/* Remove conflicting root and body styles, and import new base styles */
-@import './styles/base.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import "tailwindcss";
 
-/* Optionally, you can keep only the font-family if you want Roboto as a fallback */
-/* :root {
-  font-family: 'Roboto', sans-serif;
-} */
+:root
+{
+  --color-primary: #3a5a99;
+  --color-secondary: #5e81ac;
+  --color-accent: #88c0d0;
+  --color-bg: #f5f7fa;
+  --color-surface: #e5e9f0;
+  --color-border: #cfd8dc;
+  --color-text: #222e3a;
+  --color-muted: #7b8794;
+  --color-success: #4ecdc4;
+  --color-warning: #ffe066;
+  --color-error: #e57373;
+  --color-white: #fff;
+  --color-black: #000;
+  --font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.9rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+}
+
+@theme
+{
+  --color-primary: #3a5a99;
+  --color-secondary: #5e81ac;
+  --color-accent: #88c0d0;
+  --color-bg: #f5f7fa;
+  --color-surface: #e5e9f0;
+  --color-border: #cfd8dc;
+  --color-text: #222e3a;
+  --color-muted: #7b8794;
+  --color-success: #4ecdc4;
+  --color-warning: #ffe066;
+  --color-error: #e57373;
+  --color-white: #fff;
+  --color-black: #000;
+  --font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.9rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+}

@@ -46,7 +46,7 @@ textarea
 
 button
 {
-  background: var(--color-primary);
+  /* background: var(--color-primary);*/
   color: var(--color-white);
   border: none;
   border-radius: 6px;
@@ -55,12 +55,6 @@ button
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(58, 90, 153, 0.04);
-}
-
-button:hover,
-button:focus
-{
-  background: var(--color-secondary);
 }
 
 hr
