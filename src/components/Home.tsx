@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import productsData from '../mocks/productsData.json';
 import sitCat from '../assets/red-white-cat.webp';
 import './Home.css';
-import { AddToCartButton } from './Icons';
+import HomeSlides from './products/HomeSlides';
 import type { Data } from '../types';
 
 interface Slide {
@@ -11,74 +10,6 @@ interface Slide {
 	descripcion: string;
 	precio: number;
 }
-
-const Carousel: React.FC<{ slides: Slide[] }> = ({ slides }) => {
-	const [currentSlide, setCurrentSlide] = useState(0);
-	const [slidesToShow, setSlidesToShow] = useState(1);
-
-	useEffect(() => {
-		const resizeHandler = () => {
-			const width = window.innerWidth;
-			setSlidesToShow(Math.floor(width / 210));
-		};
-
-		resizeHandler();
-
-		window.addEventListener('resize', resizeHandler);
-		return () => {
-			window.removeEventListener('resize', resizeHandler);
-		};
-	}, []);
-
-	const nextSlide = () => {
-		setCurrentSlide((prevSlide) => (prevSlide + slidesToShow) % slides.length);
-	};
-
-	const prevSlide = () => {
-		setCurrentSlide(
-			(prevSlide) => (prevSlide - slidesToShow + slides.length) % slides.length
-		);
-	};
-
-	return (
-		<div className='carousel'>
-			<button
-				className='carousel-button prev'
-				onClick={prevSlide}
-			>
-				&#10094;
-			</button>
-			{slides
-				.slice(currentSlide, currentSlide + slidesToShow)
-				.map((slide, index) => (
-					<div
-						key={index}
-						className='slide'
-					>
-						<div className='slide-image'>
-							<img
-								src={slide.foto}
-								alt='food image'
-							/>
-						</div>
-						<div className='pet-description'>
-							<h4>{slide.descripcion}</h4>
-						</div>
-						<p>{`R$: ${slide.precio}`}</p>
-						<button className='add-to-cart-btn'>
-							<AddToCartButton />
-						</button>
-					</div>
-				))}
-			<button
-				className='carousel-button next'
-				onClick={nextSlide}
-			>
-				&#10095;
-			</button>
-		</div>
-	);
-};
 
 const Home: React.FC = () => {
 	const { pets, dogs, gatos, birds } = productsData as Data;
@@ -91,10 +22,38 @@ const Home: React.FC = () => {
 		{ title: 'Comida para aves', slides: birds.food as Slide[] },
 		{ title: 'Acessórios para aves', slides: birds.accesorios as Slide[] },
 	];
+	const [current, setCurrent] = useState(0);
+
+	const images = [
+		'../../src/assets/cat-week.webp',
+		'../../src/assets/dog-week.webp',
+		'../../src/assets/bird-week.webp',
+	];
+
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+		}, 5000);
+
+		return () => clearInterval(timer);
+	}, [images.length]);
 
 	return (
 		<div className='home-app'>
-			<div className='home-overview'>
+			<div className='flex flex-col'>
+				<div className='relative w-full h-[500px] overflow-hidden'>
+					{images.map((img, index) => (
+						<img
+							key={index}
+							src={img}
+							alt={`slide-${index}`}
+							className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+								index === current ? 'opacity-100 -z-10' : 'opacity-0 -z-20'
+							}`}
+						/>
+					))}
+				</div>
+
 				<div className='home-overview-image'>
 					<div className='background-circle'></div>
 					<img
@@ -102,29 +61,13 @@ const Home: React.FC = () => {
 						alt='cat'
 					/>
 				</div>
-				<div className='home-overview-information'>
-					<h1>
-						Bem-vindos a <span style={{ color: '#F7B733' }}>Pet</span>{' '}
-						<span style={{ color: '#000' }}>Lovers</span>, Sua Pet Online
-					</h1>
-					<h3>Ofertas Exclusivas!</h3>
-					<ul>
-						<li>🌟 20% de Desconto em Alimentos Premium</li>
-						<li>🎉 Brinquedos Divertidos pela Metade do Preço</li>
-						<li>✨ Acessórios Modernos para Cada Mascota</li>
-					</ul>
-					<div className='home-overview-links'>
-						<a href='#'>Cadastre-se</a>
-						<a href='#'>Mais Ofertas</a>
-					</div>
-				</div>
 			</div>
 			<h2>🐾 Descubra o Melhor para o Seu Melhor Amigo 🐾</h2>
 			{sections.map((section, index) => (
 				<div key={index}>
 					<h3>{section.title}</h3>
-					<Carousel
-						slides={section.slides.map((slide: any) => ({
+					<HomeSlides
+						slides={section.slides.map((slide: Slide) => ({
 							...slide,
 							precio: Number(slide.precio),
 						}))}

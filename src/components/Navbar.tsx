@@ -35,7 +35,7 @@ function Navbar() {
 		sm:static sm:translate-x-0 sm:left-auto sm:top-auto sm:px-6 sm:flex-1 sm:justify-center
 	'
 					>
-						<div className='w-full max-w-xl flex'>
+						<div className='w-full max-w-xl flex z'>
 							<input
 								id='search-input'
 								type='text'
