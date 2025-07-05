@@ -1,5 +1,4 @@
 import './Services.css';
-import dogWithGlasses from '../assets/dog-with-glasses.png';
 
 function Services() {
 	return (
@@ -17,7 +16,7 @@ function Services() {
 				</div>
 				<div className='services-image-section child'>
 					<img
-						src={dogWithGlasses}
+						src='/assets/dog-with-glasses.png'
 						alt='dog with glasses'
 					/>
 				</div>

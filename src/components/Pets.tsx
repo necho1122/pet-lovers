@@ -1,5 +1,4 @@
 import productsData from '../mocks/productsData.json';
-import petsAdoptionBackground from '../assets/pet-adoption-background.jpg';
 import './Pets.css';
 import { useState } from 'react';
 import { AddToCartButton } from './Icons';
@@ -44,7 +43,7 @@ function Pets() {
 			<div className='pets-overview'>
 				<div className='pets-overview-information'>
 					<img
-						src={petsAdoptionBackground}
+						src='/assets/pet-adoption-background.jpg'
 						alt='pet adoption'
 					/>
 					<h1>Animais Resgatados em Busca de um Lar</h1>

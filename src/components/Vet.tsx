@@ -1,6 +1,4 @@
 import './Vet.css';
-import vetBackground from '../assets/vet-min.webp';
-import petSurgery from '../assets/pet-surgery.svg';
 
 function Vet() {
 	return (
@@ -19,7 +17,7 @@ function Vet() {
 				</div>
 				<div className='vet-image-section vet-container-child'>
 					<img
-						src={vetBackground}
+						src='/assets/vet-min.webp'
 						alt='vet background image'
 					/>
 				</div>
@@ -66,7 +64,7 @@ function Vet() {
 						<a href='#cirurgias'>
 							<div className='vet-services-image'>
 								<img
-									src={petSurgery}
+									src='/assets/pet-surgery.svg'
 									alt='pet surgery icon'
 								/>
 							</div>

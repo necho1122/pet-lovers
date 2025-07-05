@@ -1,5 +1,3 @@
-import logo from '../assets/pet-lovers-logo-vertical.png';
-
 function Footer() {
 	return (
 		<footer className='footer'>
@@ -7,7 +5,7 @@ function Footer() {
 				<div className='footer__page-information'>
 					<div className='footer__logo'>
 						<img
-							src={logo}
+							src='/assets/pet-lovers-logo-vertical.png'
 							alt='Logo'
 						/>
 					</div>

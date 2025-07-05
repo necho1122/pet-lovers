@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import productsData from '../mocks/productsData.json';
-import sitCat from '../assets/red-white-cat.webp';
 import './Home.css';
 import HomeSlides from './products/HomeSlides';
 import type { Data } from '../types';
@@ -25,9 +24,9 @@ const Home: React.FC = () => {
 	const [current, setCurrent] = useState(0);
 
 	const images = [
-		'/../../src/assets/cat-week.webp',
-		'/../../src/assets/dog-week.webp',
-		'/../../src/assets/bird-week.webp',
+		'/assets/cat-week.webp',
+		'/assets/dog-week.webp',
+		'/assets/bird-week.webp',
 	];
 
 	useEffect(() => {
@@ -57,7 +56,7 @@ const Home: React.FC = () => {
 				<div className='home-overview-image'>
 					<div className='background-circle'></div>
 					<img
-						src={sitCat}
+						src='/assets/red-white-cat.webp'
 						alt='cat'
 					/>
 				</div>

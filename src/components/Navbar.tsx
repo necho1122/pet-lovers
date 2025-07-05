@@ -1,4 +1,3 @@
-import petLoversLogo from '../assets/pet-lovers-logo-vertical.png';
 import { useSelector } from 'react-redux';
 import { selectTotalQuantity } from '../store/cartSlice';
 import { useState } from 'react';
@@ -25,7 +24,7 @@ function Navbar() {
 					<a href='/'>
 						<img
 							className=''
-							src={petLoversLogo}
+							src='/assets/pet-lovers-logo-vertical.png'
 							alt='pet lovers logo'
 						/>
 					</a>
