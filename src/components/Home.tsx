@@ -25,9 +25,9 @@ const Home: React.FC = () => {
 	const [current, setCurrent] = useState(0);
 
 	const images = [
-		'../../src/assets/cat-week.webp',
-		'../../src/assets/dog-week.webp',
-		'../../src/assets/bird-week.webp',
+		'/../../src/assets/cat-week.webp',
+		'/../../src/assets/dog-week.webp',
+		'/../../src/assets/bird-week.webp',
 	];
 
 	useEffect(() => {
