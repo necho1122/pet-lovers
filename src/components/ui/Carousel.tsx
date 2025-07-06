@@ -17,7 +17,8 @@ export default function Carousel({
 	useEffect(() => {
 		const resizeHandler = () => {
 			const width = window.innerWidth;
-			setSlidesToShow(Math.max(1, Math.floor(width / slideWidth)));
+			const maxSlides = Math.max(1, Math.floor(width / slideWidth));
+			setSlidesToShow(maxSlides);
 		};
 
 		resizeHandler();
@@ -40,6 +41,12 @@ export default function Carousel({
 		currentSlide + slidesToShow
 	);
 
+	const isMobile = typeof window !== 'undefined' && window.innerWidth < 480;
+	const computedWidth =
+		slidesToShow === 1 && isMobile
+			? window.innerWidth - 80
+			: slideWidth;
+
 	return (
 		<div className={`relative w-full ${className}`}>
 			<button
@@ -49,15 +56,15 @@ export default function Carousel({
 				&#10094;
 			</button>
 
-			<div className='flex gap-5 overflow-hidden justify-center'>
+			<div className='flex gap-2 overflow-hidden justify-center sm:gap-5'>
 				{visibleSlides.map((child, index) => (
 					<div
 						key={index}
 						className={`flex-none`}
 						style={{
-							width: `${slideWidth}px`,
-							minWidth: `${slideWidth}px`,
-							maxWidth: `${slideWidth}px`,
+							width: `${computedWidth}px`,
+							minWidth: `${computedWidth}px`,
+							maxWidth: `${computedWidth}px`,
 						}}
 					>
 						{child}

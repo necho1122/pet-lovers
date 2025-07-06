@@ -4,12 +4,8 @@ import type { Data } from '../types';
 import useScreenSize from '../hooks/useScreenSize';
 import Carousel from './ui/Carousel';
 import { AddToCartButton } from './Icons';
+import { Slide } from '../types'
 
-interface Slide {
-	foto: string;
-	descripcion: string;
-	precio: number;
-}
 
 const Home: React.FC = () => {
 	const { pets, dogs, gatos, birds } = productsData as Data;
@@ -79,7 +75,7 @@ const Home: React.FC = () => {
 						{section.slides.map((slide, index) => (
 							<div
 								key={index}
-								className='bg-white flex flex-col items-center border-2 border-gray-200 rounded-lg px-3 pt-3 pb-4 text-gray-800'
+								className='bg-white flex flex-col items-center border-2 border-gray-200 rounded-lg px-3 pt-3 pb-4 text-gray-800 mb-4'
 							>
 								<div className='h-40 w-full rounded-lg overflow-hidden'>
 									<img
@@ -88,9 +84,9 @@ const Home: React.FC = () => {
 										className='w-full h-full object-cover rounded-lg'
 									/>
 								</div>
-								<h4 className='line-clamp-3 mt-2'>{slide.descripcion}</h4>
+								<h4 className='line-clamp-2 mt-2'>{slide.descripcion}</h4>
 								<p className='font-semibold'>{`R$: ${slide.precio}`}</p>
-								<button className='mt-2'>
+								<button className='px-6 py-2 mt-2 bg-success rounded-full'>
 									<AddToCartButton />
 								</button>
 							</div>

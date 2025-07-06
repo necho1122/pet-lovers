@@ -48,3 +48,9 @@ export type Gatos = {
 export type Pets = {
 	adoption: Accesorio[];
 };
+
+export interface Slide {
+	foto: string;
+	descripcion: string;
+	precio: number;
+}

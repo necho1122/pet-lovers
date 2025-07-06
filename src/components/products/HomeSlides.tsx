@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AddToCartButton } from '../Icons';
-
-interface Slide {
-	foto: string;
-	descripcion: string;
-	precio: number;
-}
+import { Slide } from '../../types';
 
 interface HomeSlidesProps {
 	slides: Slide[];
