@@ -40,7 +40,7 @@ function HomeSlides({ slides }: HomeSlidesProps) {
 	};
 
 	return (
-		<div className='carousel'>
+		<div className='relative flex flex-row justify-center gap-5 overflow-hidden pb-0'>
 			<button
 				className='carousel-button prev'
 				onClick={prevSlide}
@@ -52,16 +52,21 @@ function HomeSlides({ slides }: HomeSlidesProps) {
 				.map((slide, index) => (
 					<div
 						key={index}
-						className='slide'
+						className='flex-none sm:w-3xs max-w-64 bg-white mb-5
+								flex flex-col justify-start items-center border-2
+								border-border rounded-lg text-text 
+								transition-shadow duration-200 
+								h-auto overflow-hidden px-3 pt-3 py-2'
 					>
-						<div className='slide-image'>
+						<div className='sm:h-40 sm:w-auto rounded-lg'>
 							<img
 								src={slide.foto}
 								alt='food image'
+								className='w-full h-full object-cover rounded-lg'
 							/>
 						</div>
 						<div className='pet-description'>
-							<h4>{slide.descripcion}</h4>
+							<h4 className='line-clamp-3'>{slide.descripcion}</h4>
 						</div>
 						<p>{`R$: ${slide.precio}`}</p>
 						<button className='add-to-cart-btn'>

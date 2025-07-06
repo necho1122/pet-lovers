@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import productsData from '../mocks/productsData.json';
-import './Home.css';
-import HomeSlides from './products/HomeSlides';
 import type { Data } from '../types';
 import useScreenSize from '../hooks/useScreenSize';
+import Carousel from './ui/Carousel';
+import { AddToCartButton } from './Icons';
 
 interface Slide {
 	foto: string;
@@ -61,35 +61,41 @@ const Home: React.FC = () => {
 							}`}
 						/>
 					))}
-					<div className='absolute left-0 top-0 h-full w-7 bg-gradient-to-r from-white via-white/50 to-transparent pointer-events-none'></div>
-					<div className='absolute right-0 top-0 h-full w-7 bg-gradient-to-l from-white via-white/50 to-transparent pointer-events-none'></div>
-					<div className='absolute bottom-0 left-0 w-full h-7 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none'></div>
-				</div>
-				<div className='w-full flex flex-row'>
-					{!isMobile && (
-						<div className='relative flex-1'>
-							<div className='absolute top-0 left-0 sm:w-full aspect-square bg-[#F7B733] -z-10 [clip-path:circle(50%_at_50%_50%)] bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none'></div>
-							<img
-								src='/assets/red-white-cat.webp'
-								alt='cat'
-							/>
-						</div>
-					)}
-					<h2 className='flex-1 text-xl'>
-						🐾 Descubra o Melhor para o Seu Melhor Amigo 🐾
-					</h2>
 				</div>
 			</div>
+			<h2 className='text-xl p-3 text-center text-primary font-bold'>
+				🐾 Descubra o Melhor para o Seu Melhor Amigo 🐾
+			</h2>
 
 			{sections.map((section, index) => (
-				<div key={index}>
-					<h3>{section.title}</h3>
-					<HomeSlides
-						slides={section.slides.map((slide: Slide) => ({
-							...slide,
-							precio: Number(slide.precio),
-						}))}
-					/>
+				<div
+					key={index}
+					className='overflow-hidden'
+				>
+					<h3 className='text-center text-text font-bold pb-2'>
+						{section.title}
+					</h3>
+					<Carousel slideWidth={210}>
+						{section.slides.map((slide, index) => (
+							<div
+								key={index}
+								className='bg-white flex flex-col items-center border-2 border-gray-200 rounded-lg px-3 pt-3 pb-4 text-gray-800'
+							>
+								<div className='h-40 w-full rounded-lg overflow-hidden'>
+									<img
+										src={slide.foto}
+										alt='Imagem do produto'
+										className='w-full h-full object-cover rounded-lg'
+									/>
+								</div>
+								<h4 className='line-clamp-3 mt-2'>{slide.descripcion}</h4>
+								<p className='font-semibold'>{`R$: ${slide.precio}`}</p>
+								<button className='mt-2'>
+									<AddToCartButton />
+								</button>
+							</div>
+						))}
+					</Carousel>
 				</div>
 			))}
 		</div>
