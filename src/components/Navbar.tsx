@@ -106,6 +106,7 @@ function Navbar() {
 					</li>
 					<li>
 						<a
+							href='/pets'
 							className='flex flex-row gap-4 items-center
 							sm:gap-2
 							'

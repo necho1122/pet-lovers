@@ -3,24 +3,42 @@ import './Services.css';
 function Services() {
 	return (
 		<div className='services-container'>
-			<div className='services-overview'>
-				<div className='overview-information child'>
-					<h1>
-						Os <span style={{ color: '#F7B733' }}>Melhores</span>{' '}
-						<span style={{ color: '#000' }}>Cuidados</span> para seus pets
-					</h1>
-					<div className='links-services-section'>
-						<a href='#'>Banho e Tosa</a>
-						<a href='#'>Consultas</a>
+			<section className='bg-[#fffaf0] py-12 px-4 md:px-16'>
+				<div className='grid grid-cols-1 md:grid-cols-3 items-center gap-8'>
+					{/* Texto y botones */}
+					<div className='md:col-span-2'>
+						<h1 className='text-4xl md:text-5xl font-bold leading-tight text-slate-800'>
+							<span className='text-yellow-500'>Os Melhores </span>
+							<span className='text-blue-900'>Cuidados </span>
+							<span className='text-blue-800'>para seus pets</span>
+						</h1>
+
+						<p className='mt-4 text-lg text-slate-700 max-w-xl'>
+							Profissionais dedicados ao bem-estar do seu pet com atendimento em
+							domicílio ou na clínica.
+						</p>
+
+						<div className='mt-6 flex flex-wrap gap-4'>
+							<button className='flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-5 rounded-full shadow-md transition'>
+								🛁 Banho e Tosa
+							</button>
+							<button className='flex items-center gap-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-5 rounded-full shadow-md transition'>
+								💉 Consultas
+							</button>
+						</div>
+					</div>
+
+					{/* Imagen del perro */}
+					<div className='flex justify-center relative'>
+						<div className='w-[240px] h-[240px] md:w-[300px] md:h-[300px] rounded-full bg-blue-100 absolute top-0 -z-10'></div>
+						<img
+							src='/assets/dog-services-section.webp'
+							alt='Perro con gafas'
+							className='relative z-10 w-auto h-80 object-contain'
+						/>
 					</div>
 				</div>
-				<div className='services-image-section child'>
-					<img
-						src='/assets/dog-with-glasses.png'
-						alt='dog with glasses'
-					/>
-				</div>
-			</div>
+			</section>
 			<div className='list-pet-services'>
 				<h2>¡Clique na Cartão para Selecionar Seu Serviço Ideal!</h2>
 				<ul>

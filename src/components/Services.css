@@ -40,7 +40,6 @@
     min-width: 120px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(58, 90, 153, 0.06);
-    background: var(--color-white);
 }
 
 .overview-information h1

@@ -25,25 +25,28 @@ function AllProducts() {
 
 	return (
 		<>
-			<h3>Cães (Comidas, Brinquedos, Acessórios)</h3>
-			<div className='products-section'>
+			<h3 className='text-center text-text font-bold pb-2'>
+				Cães (Comidas, Brinquedos, Acessórios)
+			</h3>
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
 				{productsData.dogs.food.map((product) => (
 					<div
 						key={product.id}
-						className='product-slice'
+						className=' text-text flex flex-col justify-center items-center border-2 border-border rounded-md overflow-hidden mb-8'
 					>
-						<div className='product-image'>
+						<div className='w-full h-52 overflow-hidden'>
 							<img
 								src={product.foto}
 								alt='products'
+								className='w-full h-full object-cover rounded-md'
 							/>
 						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
+						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
+							{product.descripcion}
 						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
 						<button
-							className='add-to-cart-btn'
+							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
 						>
 							<AddToCartButton />
@@ -51,24 +54,25 @@ function AllProducts() {
 					</div>
 				))}
 			</div>
-			<div className='products-section'>
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
 				{productsData.dogs.accesorios.map((product) => (
 					<div
 						key={product.id}
-						className='product-slice'
+						className=' text-text flex flex-col justify-center items-center border-2 border-border rounded-md overflow-hidden mb-8'
 					>
-						<div className='product-image'>
+						<div className='w-full h-52 overflow-hidden'>
 							<img
 								src={product.foto}
 								alt='products'
+								className='w-full h-full object-cover rounded-md'
 							/>
 						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
+						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
+							{product.descripcion}
 						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
 						<button
-							className='add-to-cart-btn'
+							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
 						>
 							<AddToCartButton />
@@ -76,25 +80,28 @@ function AllProducts() {
 					</div>
 				))}
 			</div>
-			<h3>Gatos (Comidas, Brinquedos, Acessórios)</h3>
-			<div className='products-section'>
+			<h3 className='text-center text-text font-bold pb-2'>
+				Gatos (Comidas, Brinquedos, Acessórios)
+			</h3>
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
 				{productsData.gatos.comida.map((product) => (
 					<div
 						key={product.id}
-						className='product-slice'
+						className=' text-text flex flex-col justify-center items-center border-2 border-border rounded-md overflow-hidden mb-8'
 					>
-						<div className='product-image'>
+						<div className='w-full h-52 overflow-hidden'>
 							<img
 								src={product.foto}
 								alt='products'
+								className='w-full h-full object-cover rounded-md'
 							/>
 						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
+						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
+							{product.descripcion}
 						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
 						<button
-							className='add-to-cart-btn'
+							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
 						>
 							<AddToCartButton />
@@ -102,24 +109,25 @@ function AllProducts() {
 					</div>
 				))}
 			</div>
-			<div className='products-section'>
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
 				{productsData.gatos.accesorios.map((product) => (
 					<div
 						key={product.id}
-						className='product-slice'
+						className=' text-text flex flex-col justify-center items-center border-2 border-border rounded-md overflow-hidden mb-8'
 					>
-						<div className='product-image'>
+						<div className='w-full h-52 overflow-hidden'>
 							<img
 								src={product.foto}
 								alt='products'
+								className='w-full h-full object-cover rounded-md'
 							/>
 						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
+						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
+							{product.descripcion}
 						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
 						<button
-							className='add-to-cart-btn'
+							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
 						>
 							<AddToCartButton />
@@ -127,25 +135,28 @@ function AllProducts() {
 					</div>
 				))}
 			</div>
-			<h3>Aves (Comidas, Acessórios)</h3>
-			<div className='products-section'>
+			<h3 className='text-center text-text font-bold pb-2'>
+				Aves (Comidas, Acessórios)
+			</h3>
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
 				{productsData.birds.food.map((product) => (
 					<div
 						key={product.id}
-						className='product-slice'
+						className=' text-text flex flex-col justify-center items-center border-2 border-border rounded-md overflow-hidden mb-8'
 					>
-						<div className='product-image'>
+						<div className='w-full h-52 overflow-hidden'>
 							<img
 								src={product.foto}
 								alt='products'
+								className='w-full h-full object-cover rounded-md'
 							/>
 						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
+						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
+							{product.descripcion}
 						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
 						<button
-							className='add-to-cart-btn'
+							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
 						>
 							<AddToCartButton />
@@ -153,24 +164,25 @@ function AllProducts() {
 					</div>
 				))}
 			</div>
-			<div className='products-section'>
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
 				{productsData.birds.accesorios.map((product) => (
 					<div
 						key={product.id}
-						className='product-slice'
+						className=' text-text flex flex-col justify-center items-center border-2 border-border rounded-md overflow-hidden mb-8'
 					>
-						<div className='product-image'>
+						<div className='w-full h-52 overflow-hidden'>
 							<img
 								src={product.foto}
 								alt='products'
+								className='w-full h-full object-cover rounded-md'
 							/>
 						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
+						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
+							{product.descripcion}
 						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
 						<button
-							className='add-to-cart-btn'
+							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
 						>
 							<AddToCartButton />
