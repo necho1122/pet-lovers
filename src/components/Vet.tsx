@@ -1,57 +1,7 @@
 import ServicesCard from './ServicesCard';
+import { vetServices } from '../utils/constants';
 
 function Vet() {
-	const vetServices = [
-		{
-			src: 'https://www.svgrepo.com/show/423334/hospital.svg',
-			title: 'Consultas de Rotina',
-			description:
-				'Mantenha seu pet saudável com nossas consultas de rotina, onde nossa equipe dedicada oferece exames abrangentes e conselhos para o bem-estar do seu animal de estimação.',
-		},
-		{
-			src: 'https://www.svgrepo.com/show/423336/hospital-vaccine.svg',
-			title: 'Vacinação',
-			description:
-				'Proteja seu companheiro peludo contra doenças com nosso serviço de vacinação especializado, seguindo as melhores práticas e garantindo a saúde contínua do seu pet.',
-		},
-		{
-			src: '/assets/pet-surgery.svg',
-			title: 'Cirurgias',
-			description:
-				'Conte com nossa equipe experiente para procedimentos cirúrgicos seguros e eficazes, proporcionando cuidados de qualidade e recuperação tranquila para seu animal de estimação.',
-		},
-		{
-			src: 'https://www.svgrepo.com/show/423340/hospital.svg',
-			title: 'Exames de Laboratório',
-			description:
-				'Diagnóstico preciso é fundamental. Realizamos uma variedade de exames laboratoriais para identificar problemas de saúde e oferecer tratamentos personalizados para seu animal de estimação.',
-		},
-		{
-			src: 'https://www.svgrepo.com/show/423339/hospital-ekg.svg',
-			title: 'Radiografias e Ultrassonografias',
-			description:
-				'Utilizando tecnologia avançada, nossos serviços de radiografia e ultrassonografia ajudam a detectar problemas internos e orientam o tratamento adequado para o seu pet.',
-		},
-		{
-			src: 'https://www.svgrepo.com/show/423342/hospital-ambulance.svg',
-			title: 'Atendimento de Emergências',
-			description:
-				'Estamos aqui quando você mais precisa. Nossa equipe está disponível para atendimentos de emergência, oferecendo cuidados imediatos e salvando vidas quando necessário.',
-		},
-		{
-			src: 'https://www.svgrepo.com/show/295711/scalpel-surgery.svg',
-			title: 'Castração e Esterilização',
-			description:
-				'Promova uma vida longa e saudável para seu pet com nossos serviços de castração e esterilização, contribuindo para o controle populacional e prevenção de doenças.',
-		},
-		{
-			src: 'https://www.svgrepo.com/show/385145/dental-dentist-health-healthcare-medical-teeth.svg',
-			title: 'Odontologia Veterinária',
-			description:
-				'Cuide do sorriso do seu animal de estimação com nossos serviços especializados em odontologia veterinária, garantindo uma boca saudável e um estilo de vida mais confortável para seu pet.',
-		},
-	];
-
 	return (
 		<div className='max-w-7xl mx-auto'>
 			<section className='bg-[#f0f5fa] py-12 px-4 md:px-16'>
@@ -98,6 +48,7 @@ function Vet() {
 							url_image={service.src}
 							title={service.title}
 							description={service.description}
+							alt={service.title}
 						/>
 					))}
 				</ul>

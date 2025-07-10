@@ -1,9 +1,21 @@
 import { useSelector } from 'react-redux';
 import { selectTotalQuantity } from '../store/cartSlice';
 import { useState } from 'react';
-import { ThreeBars } from './Icons';
+import {
+	FaHome,
+	FaDog,
+	FaBoxOpen,
+	FaCut,
+	FaStethoscope,
+	FaShoppingCart,
+	FaSearch,
+	FaBars,
+	FaTimes,
+} from 'react-icons/fa';
+import NavbarLinks from './NavbarLinks';
 
-function Navbar() {
+export default function Navbar() {
+	const [search, setSearch] = useState('');
 	const [menuOpen, setMenuOpen] = useState(false);
 	const handleRedirect = () => {
 		window.location.href = '/cart';
@@ -11,187 +23,76 @@ function Navbar() {
 	const totalQuantity = useSelector(selectTotalQuantity);
 
 	return (
-		<div className='flex justify-center'>
-			<nav className='max-w-7xl w-full'>
-				<div className='flex justify-between px-2 py-1 items-center relative'>
-					<button
-						className='bg-transparent sm:hidden'
-						onClick={() => setMenuOpen((prev) => !prev)}
-						aria-label='Abrir o menu de navegaçao'
-					>
-						<ThreeBars />
-					</button>
-					<a href='/'>
-						<img
-							className=''
-							src='/assets/pet-lovers-logo-vertical.png'
-							alt='pet lovers logo'
-						/>
-					</a>
-					<div
-						className='
-		absolute left-1/2 -translate-x-1/2 top-14 w-full px-4 flex justify-center
-		sm:static sm:translate-x-0 sm:left-auto sm:top-auto sm:px-6 sm:flex-1 sm:justify-center
-	'
-					>
-						<div className='w-full max-w-xl flex z'>
-							<input
-								id='search-input'
-								type='text'
-								className='flex-grow border-2 px-4 bg-white border-gray-400 rounded-tl-full rounded-bl-full h-10'
-								placeholder='O que procura?'
-								aria-label='O que está procurando?'
-								aria-describedby='button-addon2'
-							/>
-							<button
-								className='w-6 px-6 bg-amber-400 h-10 rounded-tr-full rounded-br-full flex justify-center items-center'
-								type='button'
-								id='button-addon2'
-							>
-								<img
-									src='https://cdn-icons-png.flaticon.com/512/2811/2811806.png'
-									alt='search icon'
-									className='max-w-8 max-h-8'
-								/>
-							</button>
-						</div>
-					</div>
-
-					<div>
-						<button
-							className='w-11 relative rounded-full p-2'
-							onClick={handleRedirect}
-						>
-							<img
-								src='https://cdn-icons-png.flaticon.com/512/3144/3144456.png'
-								alt='cart icon'
-							/>
-							<span className='absolute top-0 right-0 rounded-full bg-red-400 w-5 h-5 text-xs font-bold flex items-center justify-center'>
-								{totalQuantity}
-							</span>
-						</button>
-					</div>
+		<header className='bg-white shadow-md border-b border-gray-100'>
+			<div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between px-4 py-3'>
+				<div className='flex items-center gap-2 text-2xl font-bold text-gray-800 flex-shrink-0'>
+					<img
+						src='/assets/logo.webp'
+						alt='Pet Lovers'
+						className='w-8 h-8'
+					/>
+					<span>
+						<span className='text-yellow-500'>Pet</span> Lovers
+					</span>
 				</div>
-				<ul
-					className={`
-		absolute top-14 w-full bg-gray-800 z-20
-		flex flex-col items-center gap-4 py-4
-		sm:flex sm:flex-row sm:static sm:translate-y-0 sm:opacity-100 sm:scale-y-100 sm:pointer-events-auto sm:transition-none
-		sm:justify-between sm:px-4 sm:bg-transparent
-
-		transition-all duration-300 ease-in-out origin-top
-		${menuOpen ? 'opacity-100 translate-y-0 scale-y-100 pointer-events-auto' : 'opacity-0 -translate-y-4 scale-y-95 pointer-events-none'}
-	`}
+				<button
+					className='sm:hidden text-2xl text-gray-700 ml-auto'
+					onClick={() => setMenuOpen(!menuOpen)}
+					aria-label='Abrir menu'
 				>
-					<li>
-						<a
-							href='/'
-							className='flex flex-row gap-4 items-center
-							sm:gap-2
-							'
-						>
-							<img
-								src='https://cdn-icons-png.flaticon.com/512/2550/2550430.png'
-								alt='home icon'
-								className='w-7'
-							/>{' '}
-							<span
-								className='text-amber-50 hover:text-amber-400 font-bold
-							 sm:text-primary sm:text-lg 
-							'
-							>
-								Home
-							</span>
-						</a>
-					</li>
-					<li>
-						<a
-							href='/pets'
-							className='flex flex-row gap-4 items-center
-							sm:gap-2
-							'
-						>
-							<img
-								src='https://cdn-icons-png.flaticon.com/512/3460/3460335.png'
-								alt='pets icon'
-								className='w-7'
-							/>{' '}
-							<span
-								className='text-amber-50 hover:text-amber-400 font-bold
-							 sm:text-primary sm:text-lg 
-							'
-							>
-								Pets
-							</span>
-						</a>
-					</li>
-					<li>
-						<a
-							href='/products'
-							className='flex flex-row gap-4 items-center
-							sm:gap-2
-							'
-						>
-							<img
-								src='https://cdn-icons-png.flaticon.com/512/14427/14427467.png'
-								alt='products icon'
-								className='w-7'
-							/>{' '}
-							<span
-								className='text-amber-50 hover:text-amber-400 font-bold
-							 sm:text-primary sm:text-lg 
-							'
-							>
-								Produtos
-							</span>
-						</a>
-					</li>
-					<li>
-						<a
-							href='/services'
-							className='flex flex-row gap-4 items-center
-							sm:gap-2
-							'
-						>
-							<img
-								src='https://cdn-icons-png.flaticon.com/512/2138/2138358.png'
-								alt='pets services icon'
-								className='w-7'
-							/>{' '}
-							<span
-								className='text-amber-50 hover:text-amber-400 font-bold
-							 sm:text-primary sm:text-lg 
-							'
-							>
-								Serviços
-							</span>
-						</a>
-					</li>
-					<li>
-						<a
-							href='/veterinary'
-							className='flex flex-row gap-4 items-center
-							sm:gap-2
-							'
-						>
-							<img
-								src='https://cdn-icons-png.flaticon.com/512/3611/3611419.png'
-								alt='veterinary icon'
-								className='w-7'
-							/>
-							<span
-								className='text-amber-50 hover:text-amber-400 font-bold
-							 sm:text-primary sm:text-lg 
-							'
-							>
-								Veterinaria
-							</span>
-						</a>
-					</li>
-				</ul>
+					{menuOpen ? <FaTimes /> : <FaBars />}
+				</button>
+				<div className='relative w-full sm:w-auto sm:flex-grow max-w-md mt-3 sm:mt-0 order-3 sm:order-none'>
+					<input
+						type='text'
+						value={search}
+						onChange={(e) => setSearch(e.target.value)}
+						placeholder='O que procura?'
+						className='w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400'
+					/>
+					<FaSearch className='absolute left-3 top-2.5 text-gray-400 text-lg' />
+				</div>
+				<button
+					className='relative flex-shrink-0 ml-4 hover:cursor-pointer'
+					onClick={handleRedirect}
+				>
+					<FaShoppingCart className='text-2xl text-gray-700' />
+					<span className='absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 rounded-full'>
+						{totalQuantity}
+					</span>
+				</button>
+			</div>
+			<nav
+				className={`sm:flex ${
+					menuOpen ? 'flex flex-col px-6 pb-4' : 'hidden'
+				} sm:flex-row sm:justify-center sm:items-center sm:gap-6 text-blue-900 font-medium text-sm`}
+			>
+				<NavbarLinks
+					href='/'
+					icon={<FaHome className='text-lg' />}
+					label='Home'
+				/>
+				<NavbarLinks
+					href='/pets'
+					icon={<FaDog className='text-lg' />}
+					label='Pets'
+				/>
+				<NavbarLinks
+					href='/products'
+					icon={<FaBoxOpen className='text-lg' />}
+					label='Produtos'
+				/>
+				<NavbarLinks
+					href='/services'
+					icon={<FaCut className='text-lg' />}
+					label='Serviços'
+				/>
+				<NavbarLinks
+					href='/veterinary'
+					icon={<FaStethoscope className='text-lg' />}
+					label='Veterinaria'
+				/>
 			</nav>
-		</div>
+		</header>
 	);
 }
-
-export default Navbar;
