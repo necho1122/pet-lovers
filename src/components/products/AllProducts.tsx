@@ -44,7 +44,9 @@ function AllProducts() {
 						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
 							{product.descripcion}
 						</div>
-						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>
+							R$ {product.precio}
+						</p>
 						<button
 							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
@@ -70,7 +72,9 @@ function AllProducts() {
 						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
 							{product.descripcion}
 						</div>
-						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>
+							R$ {product.precio}
+						</p>
 						<button
 							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
@@ -99,7 +103,9 @@ function AllProducts() {
 						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
 							{product.descripcion}
 						</div>
-						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>
+							R$ {product.precio}
+						</p>
 						<button
 							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
@@ -125,7 +131,9 @@ function AllProducts() {
 						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
 							{product.descripcion}
 						</div>
-						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>
+							R$ {product.precio}
+						</p>
 						<button
 							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
@@ -154,7 +162,9 @@ function AllProducts() {
 						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
 							{product.descripcion}
 						</div>
-						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>
+							R$ {product.precio}
+						</p>
 						<button
 							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}
@@ -180,7 +190,9 @@ function AllProducts() {
 						<div className='line-clamp-2 leading-tight max-h-10 text-center px-2 mt-2 text-base'>
 							{product.descripcion}
 						</div>
-						<p className='font-semibold text-center px-2 text-base'>R$ {product.precio}</p>
+						<p className='font-semibold text-center px-2 text-base'>
+							R$ {product.precio}
+						</p>
 						<button
 							className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
 							onClick={() => handleAddItem(product)}

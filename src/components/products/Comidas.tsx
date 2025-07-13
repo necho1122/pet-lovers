@@ -1,17 +1,19 @@
 import productsData from '../../mocks/productsData.json';
-import { AddToCartButton } from '../Icons';
 import { addItem } from '../../store/cartSlice';
 import { useDispatch } from 'react-redux';
+import ProductCard from './ProductCard';
+
+interface Product {
+	id: string;
+	descripcion: string;
+	precio: number;
+	foto: string;
+}
 
 function Comidas() {
 	const dispatch = useDispatch();
 
-	const handleAddItem = (product: {
-		id: string;
-		descripcion: string;
-		precio: number;
-		foto: string;
-	}) => {
+	const handleAddItem = (product: Product) => {
 		const newItem = {
 			id: product.id,
 			descripcion: product.descripcion,
@@ -25,81 +27,33 @@ function Comidas() {
 	return (
 		<>
 			<h3>Comidas para Cães</h3>
-			<div className='products-section'>
-				{productsData.dogs.food.map((product) => (
-					<div
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
+				{productsData.dogs.food.map((product: Product) => (
+					<ProductCard
 						key={product.id}
-						className='product-slice'
-					>
-						<div className='product-image'>
-							<img
-								src={product.foto}
-								alt='products'
-							/>
-						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
-						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
-						<button
-							className='add-to-cart-btn'
-							onClick={() => handleAddItem(product)}
-						>
-							<AddToCartButton />
-						</button>
-					</div>
+						product={product}
+						onClick={handleAddItem}
+					/>
 				))}
 			</div>
 			<h3>Comidas para Gatos</h3>
-			<div className='products-section'>
-				{productsData.gatos.comida.map((product) => (
-					<div
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
+				{productsData.gatos.comida.map((product: Product) => (
+					<ProductCard
 						key={product.id}
-						className='product-slice'
-					>
-						<div className='product-image'>
-							<img
-								src={product.foto}
-								alt='products'
-							/>
-						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
-						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
-						<button
-							className='add-to-cart-btn'
-							onClick={() => handleAddItem(product)}
-						>
-							<AddToCartButton />
-						</button>
-					</div>
+						product={product}
+						onClick={handleAddItem}
+					/>
 				))}
 			</div>
 			<h3>Comidas para Aves</h3>
-			<div className='products-section'>
-				{productsData.birds.food.map((product) => (
-					<div
+			<div className='grid [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))] gap-4 mx-auto'>
+				{productsData.birds.food.map((product: Product) => (
+					<ProductCard
 						key={product.id}
-						className='product-slice'
-					>
-						<div className='product-image'>
-							<img
-								src={product.foto}
-								alt='products'
-							/>
-						</div>
-						<div className='product-description'>
-							<p>{product.descripcion}</p>
-						</div>
-						<p className='adoption-indication'>R$ {product.precio}</p>
-						<button
-							className='add-to-cart-btn'
-							onClick={() => handleAddItem(product)}
-						>
-							<AddToCartButton />
-						</button>
-					</div>
+						product={product}
+						onClick={handleAddItem}
+					/>
 				))}
 			</div>
 		</>

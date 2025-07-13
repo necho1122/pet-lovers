@@ -3,28 +3,13 @@ import AllProducts from './AllProducts';
 import Comidas from './Comidas';
 import Accesorios from './Accesorios';
 import ServicesHero from '../ui/ServicesHero';
-import data from '../../mocks/productsData.json';
 
-interface Product {
-	id: string;
-	raza: string;
-	foto: string;
-	descripcion: string;
-	precio: number;
-}
-
-function Products(product: Product) {
+function Products() {
 	const [filterProducts, setFilterProducts] = useState('all');
 
 	const handleFilterChange = (filter: string) => {
 		setFilterProducts(filter);
 	};
-
-	const toFilterProducts = [
-		{ accesorios: [data.dogs.accesorios, data.gatos.accesorios] },
-		{ comidas: [data.dogs.food, data.gatos.comida, data.birds.food] },
-		{ brinquedos: 'Sin Brinquedos por encuanto' },
-	];
 
 	const buttonContent = [
 		{
@@ -34,13 +19,13 @@ function Products(product: Product) {
 			color: 'bg-amber-400',
 		},
 		{
-			item: 'gato',
+			item: 'acessorios',
 			label: 'Accesorios',
 			img: 'https://cdn-icons-png.flaticon.com/512/1279/1279397.png',
 			color: 'bg-error',
 		},
 		{
-			item: 'bird',
+			item: 'brinquedos',
 			label: 'Brinquedos',
 			img: 'https://cdn-icons-png.flaticon.com/512/9031/9031174.png',
 			color: 'bg-success',
@@ -50,24 +35,20 @@ function Products(product: Product) {
 	return (
 		<div className='max-w-7xl mx-auto'>
 			<ServicesHero
-				onFilter={(filter) => {
-					const filtrados = productsData.pets.adoption.filter(
-						(p: Product) => p.raza === filter
-					);
-					setRaza(filtrados);
-				}}
-				title='Descubra o Melhor para o Seu Pet: Nutrição, Diversão e Bem- Estar'
+				onFilter={handleFilterChange}
+				title='Descubra o Melhor para o Seu Pet: Nutrição, Diversão e Bem-Estar'
 				bgImage='/assets/petshop-background.webp'
-				alt='Animais resgatados'
+				alt='Petshop background'
 				datos={buttonContent}
 			/>
+
 			{
 				{
 					all: <AllProducts />,
 					comidas: <Comidas />,
 					brinquedos: (
-						<div className='text-primary text- px-4 text-center text-2xl my-4 drop-shadow-sm'>
-							Sim brinquedos por encuanto
+						<div className='text-primary px-4 text-center text-2xl my-4 drop-shadow-sm'>
+							Sem brinquedos por enquanto
 						</div>
 					),
 					acessorios: <Accesorios />,

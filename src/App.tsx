@@ -48,17 +48,15 @@ function App() {
 							path='*'
 							element={<h1>Page not found at Pet Lovers</h1>}
 						/>
+						<Route
+							path='cart'
+							element={<Cart />}
+						/>
+						<Route
+							path='payment'
+							element={<PaymentForm />}
+						/>
 					</Route>
-					{/* Rutas para otros componentes */}
-					<Route
-						path='cart'
-						element={<Cart />}
-					/>
-					<Route
-						path='payment'
-						element={<PaymentForm />}
-					/>
-					{/* Redireccionar cualquier otra ruta a la página principal */}
 				</Routes>
 			</BrowserRouter>
 		</>
