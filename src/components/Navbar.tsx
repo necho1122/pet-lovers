@@ -65,7 +65,7 @@ export default function Navbar() {
 			<nav
 				className={`sm:flex ${
 					menuOpen ? 'flex flex-col px-6 pb-4' : 'hidden'
-				} sm:flex-row sm:justify-center sm:items-center sm:gap-6 text-blue-900 font-medium text-sm`}
+				} sm:flex-row sm:justify-center sm:items-center sm:gap-6 text-primary font-medium text-sm`}
 			>
 				<NavbarLinks
 					href='/'

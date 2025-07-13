@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { AddToCartButton } from './Icons';
 import { addItem } from '../store/cartSlice';
 import { useDispatch } from 'react-redux';
+import ServicesHero from './ui/ServicesHero';
 
 interface Product {
 	id: string;
@@ -11,6 +12,27 @@ interface Product {
 	descripcion: string;
 	precio: number;
 }
+
+const buttonContent = [
+	{
+		item: 'cachorro',
+		label: 'Cachorros',
+		img: 'https://cdn-icons-png.flaticon.com/512/15721/15721652.png',
+		color: 'bg-amber-400',
+	},
+	{
+		item: 'gato',
+		label: 'Gatos',
+		img: 'https://cdn-icons-png.flaticon.com/512/10890/10890561.png',
+		color: 'bg-error',
+	},
+	{
+		item: 'bird',
+		label: 'Outros',
+		img: 'https://cdn-icons-png.flaticon.com/512/9513/9513911.png',
+		color: 'bg-success',
+	},
+];
 
 function Pets() {
 	const dispatch = useDispatch();
@@ -21,61 +43,20 @@ function Pets() {
 
 	const [raza, setRaza] = useState<Product[]>(productsData.pets.adoption);
 
-	const handleRazaChange = (raza: Product[]) => setRaza(raza);
-
 	return (
 		<div className='max-w-7xl mx-auto'>
-			<div className='flex justify-between items-center'>
-				<div className='w-full h-80 relative flex flex-col justify-center items-center overflow-hidden'>
-					<img
-						src='/assets/pet-adoption-background.jpg'
-						alt='pet adoption'
-						className='w-full h-full object-cover rounded-md absolute -z-10 opacity-50'
-					/>
-					<h1 className='text-text font-extrabold text-3xl px-4 text-center'>
-						Animais Resgatados em Busca de um Lar
-					</h1>
-
-					<div className='flex flex-row justify-center items-center p-4 gap-2 sm:gap-4'>
-						{[
-							{
-								raza: 'cachorro',
-								label: 'Cachorros',
-								img: 'https://cdn-icons-png.flaticon.com/512/13481/13481015.png',
-							},
-							{
-								raza: 'gato',
-								label: 'Gatos',
-								img: 'https://cdn-icons-png.flaticon.com/512/5702/5702228.png',
-							},
-							{
-								raza: 'bird',
-								label: 'Outros',
-								img: 'https://cdn-icons-png.flaticon.com/512/3397/3397478.png',
-							},
-						].map(({ raza: r, label, img }) => (
-							<a
-								key={r}
-								href='#'
-								onClick={(e) => {
-									e.preventDefault();
-									handleRazaChange(
-										productsData.pets.adoption.filter((p) => p.raza === r)
-									);
-								}}
-								className='no-underline text-text text-base font-bold px-4 sm:py-4 rounded-md border-2 border-border bg-amber-400 flex flex-col justify-center items-center w-28 py-2'
-							>
-								<img
-									src={img}
-									alt={`${label} icon`}
-									className='sm:w-12 sm:h-12 w-9 h-9'
-								/>
-								{label}
-							</a>
-						))}
-					</div>
-				</div>
-			</div>
+			<ServicesHero
+				onFilter={(filter) => {
+					const filtrados = productsData.pets.adoption.filter(
+						(p: Product) => p.raza === filter
+					);
+					setRaza(filtrados);
+				}}
+				title='Animais Resgatados em Busca de um Lar'
+				bgImage='/assets/pet-adoption-background.jpg'
+				alt='Animais resgatados'
+				datos={buttonContent}
+			/>
 
 			<div>
 				<h2 className='text-primary text- px-4 text-center text-2xl my-4 drop-shadow-sm'>
@@ -103,7 +84,7 @@ function Pets() {
 							</p>
 							<button
 								onClick={() => handleAddItem(slide)}
-								className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer'
+								className='px-6 py-2 my-2 bg-success rounded-full hover:cursor-pointer hover:bg-amber-400'
 							>
 								<AddToCartButton />
 							</button>
